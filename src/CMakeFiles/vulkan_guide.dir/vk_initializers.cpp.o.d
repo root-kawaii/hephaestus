@@ -41,4 +41,5 @@ src/CMakeFiles/vulkan_guide.dir/vk_initializers.cpp.o: \
   /usr/local/include/vk_video/vulkan_video_codec_h264std.h \
   /usr/local/include/vk_video/vulkan_video_codec_h264std_decode.h \
   /usr/local/include/vk_video/vulkan_video_codec_h265std.h \
-  /usr/local/include/vk_video/vulkan_video_codec_h265std_decode.h
+  /usr/local/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/vma/vk_mem_alloc.h
