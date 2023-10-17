@@ -2,6 +2,9 @@
 a23133ea1abba32ea3cd16cfa0e55692 CMakeFiles/Shaders
 60145c062c071954d78e235078641d6b shaders/colored_triangle.frag.spv
 b29c677113999b7892f881aaeb6ec93d shaders/colored_triangle.vert.spv
+1699c00b82b14812e8438c92a8a57996 shaders/default_lit.frag.spv
+e2410aa40c28ddb49b7561989707d05b shaders/textured_lit.frag.spv
 3e896b8949e963503b7251dbd6871697 shaders/tri_mesh.vert.spv
+c3634d9be40d2e4544e2ebcaf0f6b8c3 shaders/tri_mesh_ssbo.vert.spv
 40b0cc5b40494fe2a0a54469778588fd shaders/triangle.frag.spv
 36f930c230699b210b9ff5b55d50080a shaders/triangle.vert.spv

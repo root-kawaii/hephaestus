@@ -74,7 +74,17 @@
     "type_traits": "cpp",
     "utility": "cpp",
     "cinttypes": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "__mutex_base": "cpp",
+    "condition_variable": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "mutex": "cpp",
+    "semaphore": "cpp",
+    "shared_mutex": "cpp",
+    "thread": "cpp",
+    "ranges": "cpp",
+    "stop_token": "cpp"
   },
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

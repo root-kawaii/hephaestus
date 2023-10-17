@@ -4,10 +4,8 @@
 //output write
 layout (location = 0) out vec4 outFragColor;
 
-void main()
+void main() 
 {
 	//return red
 	outFragColor = vec4(1.f,0.f,0.f,1.0f);
 }
-
-layout (location = 0) in vec3 inColor;

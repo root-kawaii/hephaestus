@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <player_camera.h>
 #include <vk_types.h>
 #include <vector>
 #include <functional>
@@ -15,20 +16,8 @@
 #include <unordered_map>
 #include <string>
 
-struct Material
-{
-    VkPipeline pipeline;
-    VkPipelineLayout pipelineLayout;
-};
-
-struct RenderObject
-{
-    Mesh *mesh;
-
-    Material *material;
-
-    glm::mat4 transformMatrix;
-};
+// vulkan_guide.h : Include file for standard system include files,
+// or project specific include files.
 
 class PipelineBuilder
 {
@@ -73,6 +62,74 @@ struct MeshPushConstants
     glm::mat4 render_matrix;
 };
 
+struct Material
+{
+    VkDescriptorSet textureSet{VK_NULL_HANDLE};
+    VkPipeline pipeline;
+    VkPipelineLayout pipelineLayout;
+};
+
+struct Texture
+{
+    AllocatedImage image;
+    VkImageView imageView;
+};
+
+struct RenderObject
+{
+    Mesh *mesh;
+
+    Material *material;
+
+    glm::mat4 transformMatrix;
+};
+
+struct FrameData
+{
+    VkSemaphore _presentSemaphore, _renderSemaphore;
+    VkFence _renderFence;
+
+    DeletionQueue _frameDeletionQueue;
+
+    VkCommandPool _commandPool;
+    VkCommandBuffer _mainCommandBuffer;
+
+    AllocatedBuffer cameraBuffer;
+    VkDescriptorSet globalDescriptor;
+
+    AllocatedBuffer objectBuffer;
+    VkDescriptorSet objectDescriptor;
+};
+
+struct UploadContext
+{
+    VkFence _uploadFence;
+    VkCommandPool _commandPool;
+    VkCommandBuffer _commandBuffer;
+};
+struct GPUCameraData
+{
+    glm::mat4 view;
+    glm::mat4 proj;
+    glm::mat4 viewproj;
+};
+
+struct GPUSceneData
+{
+    glm::vec4 fogColor;     // w is for exponent
+    glm::vec4 fogDistances; // x for min, y for max, zw unused.
+    glm::vec4 ambientColor;
+    glm::vec4 sunlightDirection; // w for sun power
+    glm::vec4 sunlightColor;
+};
+
+struct GPUObjectData
+{
+    glm::mat4 modelMatrix;
+};
+
+constexpr unsigned int FRAME_OVERLAP = 2;
+
 class VulkanEngine
 {
 public:
@@ -80,23 +137,23 @@ public:
     int _frameNumber{0};
     int _selectedShader{0};
 
-    VkExtent2D _windowExtent{800, 400};
+    VkExtent2D _windowExtent{800, 500};
 
     struct SDL_Window *_window{nullptr};
+
+    PlayerCamera _camera;
 
     VkInstance _instance;
     VkDebugUtilsMessengerEXT _debug_messenger;
     VkPhysicalDevice _chosenGPU;
     VkDevice _device;
 
-    VkSemaphore _presentSemaphore, _renderSemaphore;
-    VkFence _renderFence;
+    VkPhysicalDeviceProperties _gpuProperties;
+
+    FrameData _frames[FRAME_OVERLAP];
 
     VkQueue _graphicsQueue;
     uint32_t _graphicsQueueFamily;
-
-    VkCommandPool _commandPool;
-    VkCommandBuffer _mainCommandBuffer;
 
     VkRenderPass _renderPass;
 
@@ -108,16 +165,7 @@ public:
     std::vector<VkImage> _swapchainImages;
     std::vector<VkImageView> _swapchainImageViews;
 
-    VkPipelineLayout _trianglePipelineLayout;
-
-    VkPipeline _trianglePipeline;
-    VkPipeline _redTrianglePipeline;
-
     DeletionQueue _mainDeletionQueue;
-
-    VkPipeline _meshPipeline;
-
-    VkPipelineLayout _meshPipelineLayout;
 
     VmaAllocator _allocator; // vma lib allocator
 
@@ -128,25 +176,16 @@ public:
     // the format for the depth image
     VkFormat _depthFormat;
 
-    // default array of renderable objects
-    std::vector<RenderObject> _renderables;
+    VkDescriptorPool _descriptorPool;
 
-    std::unordered_map<std::string, Material> _materials;
-    std::unordered_map<std::string, Mesh> _meshes;
-    // functions
+    VkDescriptorSetLayout _globalSetLayout;
+    VkDescriptorSetLayout _objectSetLayout;
+    VkDescriptorSetLayout _singleTextureSetLayout;
 
-    // create material and add it to the map
-    Material *create_material(VkPipeline pipeline, VkPipelineLayout layout, const std::string &name);
+    GPUSceneData _sceneParameters;
+    AllocatedBuffer _sceneParameterBuffer;
 
-    // returns nullptr if it can't be found
-    Material *get_material(const std::string &name);
-
-    // returns nullptr if it can't be found
-    Mesh *get_mesh(const std::string &name);
-
-    // our draw function
-    void draw_objects(VkCommandBuffer cmd, RenderObject *first, int count);
-
+    UploadContext _uploadContext;
     // initializes everything in the engine
     void init();
 
@@ -158,6 +197,37 @@ public:
 
     // run main loop
     void run();
+
+    FrameData &get_current_frame();
+    FrameData &get_last_frame();
+
+    // default array of renderable objects
+    std::vector<RenderObject> _renderables;
+
+    std::unordered_map<std::string, Material> _materials;
+    std::unordered_map<std::string, Mesh> _meshes;
+    std::unordered_map<std::string, Texture> _loadedTextures;
+    // functions
+
+    // create material and add it to the map
+    Material *create_material(VkPipeline pipeline, VkPipelineLayout layout, const std::string &name);
+
+    // returns nullptr if it cant be found
+    Material *get_material(const std::string &name);
+
+    // returns nullptr if it cant be found
+    Mesh *get_mesh(const std::string &name);
+
+    void init_imgui();
+
+    // our draw function
+    void draw_objects(VkCommandBuffer cmd, RenderObject *first, int count);
+
+    AllocatedBuffer create_buffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memoryUsage);
+
+    size_t pad_uniform_buffer_size(size_t originalSize);
+
+    void immediate_submit(std::function<void(VkCommandBuffer cmd)> &&function);
 
 private:
     void init_vulkan();
@@ -174,12 +244,16 @@ private:
 
     void init_pipelines();
 
+    void init_scene();
+
+    void init_descriptors();
+
     // loads a shader module from a spir-v file. Returns false if it errors
     bool load_shader_module(const char *filePath, VkShaderModule *outShaderModule);
 
     void load_meshes();
 
-    void upload_mesh(Mesh &mesh);
+    void load_images();
 
-    void init_scene();
+    void upload_mesh(Mesh &mesh);
 };

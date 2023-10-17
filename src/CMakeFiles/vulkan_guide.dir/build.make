@@ -125,12 +125,42 @@ src/CMakeFiles/vulkan_guide.dir/vk_mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkan_guide.dir/vk_mesh.cpp.s"
 	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_mesh.cpp -o CMakeFiles/vulkan_guide.dir/vk_mesh.cpp.s
 
+src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o: src/CMakeFiles/vulkan_guide.dir/flags.make
+src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o: src/vk_textures.cpp
+src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o: src/CMakeFiles/vulkan_guide.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o -MF CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o.d -o CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_textures.cpp
+
+src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkan_guide.dir/vk_textures.cpp.i"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_textures.cpp > CMakeFiles/vulkan_guide.dir/vk_textures.cpp.i
+
+src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkan_guide.dir/vk_textures.cpp.s"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_textures.cpp -o CMakeFiles/vulkan_guide.dir/vk_textures.cpp.s
+
+src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.o: src/CMakeFiles/vulkan_guide.dir/flags.make
+src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.o: src/player_camera.cpp
+src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.o: src/CMakeFiles/vulkan_guide.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.o -MF CMakeFiles/vulkan_guide.dir/player_camera.cpp.o.d -o CMakeFiles/vulkan_guide.dir/player_camera.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/player_camera.cpp
+
+src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkan_guide.dir/player_camera.cpp.i"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/player_camera.cpp > CMakeFiles/vulkan_guide.dir/player_camera.cpp.i
+
+src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkan_guide.dir/player_camera.cpp.s"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/player_camera.cpp -o CMakeFiles/vulkan_guide.dir/player_camera.cpp.s
+
 # Object files for target vulkan_guide
 vulkan_guide_OBJECTS = \
 "CMakeFiles/vulkan_guide.dir/main.cpp.o" \
 "CMakeFiles/vulkan_guide.dir/vk_engine.cpp.o" \
 "CMakeFiles/vulkan_guide.dir/vk_initializers.cpp.o" \
-"CMakeFiles/vulkan_guide.dir/vk_mesh.cpp.o"
+"CMakeFiles/vulkan_guide.dir/vk_mesh.cpp.o" \
+"CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o" \
+"CMakeFiles/vulkan_guide.dir/player_camera.cpp.o"
 
 # External object files for target vulkan_guide
 vulkan_guide_EXTERNAL_OBJECTS =
@@ -139,13 +169,15 @@ bin/vulkan_guide: src/CMakeFiles/vulkan_guide.dir/main.cpp.o
 bin/vulkan_guide: src/CMakeFiles/vulkan_guide.dir/vk_engine.cpp.o
 bin/vulkan_guide: src/CMakeFiles/vulkan_guide.dir/vk_initializers.cpp.o
 bin/vulkan_guide: src/CMakeFiles/vulkan_guide.dir/vk_mesh.cpp.o
+bin/vulkan_guide: src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o
+bin/vulkan_guide: src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.o
 bin/vulkan_guide: src/CMakeFiles/vulkan_guide.dir/build.make
 bin/vulkan_guide: third_party/libvkbootstrap.a
 bin/vulkan_guide: third_party/libtinyobjloader.a
 bin/vulkan_guide: third_party/libimgui.a
 bin/vulkan_guide: /usr/local/lib/libvulkan.dylib
 bin/vulkan_guide: src/CMakeFiles/vulkan_guide.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../bin/vulkan_guide"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/vulkan_guide"
 	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vulkan_guide.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

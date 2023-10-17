@@ -154,6 +154,30 @@ main.cpp.s:
 	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+player_camera.o: player_camera.cpp.o
+.PHONY : player_camera.o
+
+# target to build an object file
+player_camera.cpp.o:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.o
+.PHONY : player_camera.cpp.o
+
+player_camera.i: player_camera.cpp.i
+.PHONY : player_camera.i
+
+# target to preprocess a source file
+player_camera.cpp.i:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.i
+.PHONY : player_camera.cpp.i
+
+player_camera.s: player_camera.cpp.s
+.PHONY : player_camera.s
+
+# target to generate assembly for a file
+player_camera.cpp.s:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/player_camera.cpp.s
+.PHONY : player_camera.cpp.s
+
 vk_engine.o: vk_engine.cpp.o
 .PHONY : vk_engine.o
 
@@ -226,6 +250,30 @@ vk_mesh.cpp.s:
 	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/vk_mesh.cpp.s
 .PHONY : vk_mesh.cpp.s
 
+vk_textures.o: vk_textures.cpp.o
+.PHONY : vk_textures.o
+
+# target to build an object file
+vk_textures.cpp.o:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.o
+.PHONY : vk_textures.cpp.o
+
+vk_textures.i: vk_textures.cpp.i
+.PHONY : vk_textures.i
+
+# target to preprocess a source file
+vk_textures.cpp.i:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.i
+.PHONY : vk_textures.cpp.i
+
+vk_textures.s: vk_textures.cpp.s
+.PHONY : vk_textures.s
+
+# target to generate assembly for a file
+vk_textures.cpp.s:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/vk_textures.cpp.s
+.PHONY : vk_textures.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,6 +286,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... player_camera.o"
+	@echo "... player_camera.i"
+	@echo "... player_camera.s"
 	@echo "... vk_engine.o"
 	@echo "... vk_engine.i"
 	@echo "... vk_engine.s"
@@ -247,6 +298,9 @@ help:
 	@echo "... vk_mesh.o"
 	@echo "... vk_mesh.i"
 	@echo "... vk_mesh.s"
+	@echo "... vk_textures.o"
+	@echo "... vk_textures.i"
+	@echo "... vk_textures.s"
 .PHONY : help
 
 
