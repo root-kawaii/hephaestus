@@ -169,17 +169,30 @@ imgui/fast:
 .PHONY : imgui/fast
 
 #=============================================================================
-# Target rules for targets named vulkan_guide
+# Target rules for targets named asset_core
 
 # Build rule for target.
-vulkan_guide: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vulkan_guide
-.PHONY : vulkan_guide
+asset_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core
+.PHONY : asset_core
 
 # fast build rule for target.
-vulkan_guide/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/vulkan_guide.dir/build.make src/CMakeFiles/vulkan_guide.dir/build
-.PHONY : vulkan_guide/fast
+asset_core/fast:
+	$(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/build
+.PHONY : asset_core/fast
+
+#=============================================================================
+# Target rules for targets named hephaestus
+
+# Build rule for target.
+hephaestus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hephaestus
+.PHONY : hephaestus
+
+# fast build rule for target.
+hephaestus/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/build
+.PHONY : hephaestus/fast
 
 # Help Target
 help:
@@ -190,10 +203,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Shaders"
+	@echo "... asset_core"
+	@echo "... hephaestus"
 	@echo "... imgui"
 	@echo "... tinyobjloader"
 	@echo "... vkbootstrap"
-	@echo "... vulkan_guide"
 .PHONY : help
 
 

@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/cmake_install.cmake")
+  include("/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core/cmake_install.cmake")
   include("/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/cmake_install.cmake")
 
 endif()

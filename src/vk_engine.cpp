@@ -18,9 +18,6 @@
 
 #include "VkBootstrap.h"
 
-#include <iostream>
-#include <fstream>
-
 #define VMA_IMPLEMENTATION
 #include "vk_mem_alloc.h"
 
@@ -28,6 +25,11 @@ constexpr bool bUseValidationLayers = true;
 
 // we want to immediately abort when there is an error. In normal engines this would give an error message to the user, or perform a dump of state.
 using namespace std;
+
+vector<string> prev_commands;
+bool ischanged;
+std::string path = "";
+
 #define VK_CHECK(x)                                               \
   do                                                              \
   {                                                               \
@@ -47,7 +49,7 @@ void VulkanEngine::init()
   SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_VULKAN);
 
   _window = SDL_CreateWindow(
-      "Vulkan Engine",
+      "Hephaestus",
       SDL_WINDOWPOS_UNDEFINED,
       SDL_WINDOWPOS_UNDEFINED,
       _windowExtent.width,
@@ -224,20 +226,29 @@ void VulkanEngine::run()
       ImGui_ImplSDL2_ProcessEvent(&e);
 
       // close the window when user alt-f4s or clicks the X button
-      _camera.process_input_event(&e);
+      if (!_konsole)
+      {
+        _camera.process_input_event(&e);
+      }
       if (e.type == SDL_QUIT)
       {
         bQuit = true;
       }
       else if (e.type == SDL_KEYDOWN)
       {
-        if (e.key.keysym.sym == SDLK_SPACE)
+
+        if (e.key.keysym.sym == SDLK_1)
         {
-          _selectedShader += 1;
-          if (_selectedShader > 1)
-          {
-            _selectedShader = 0;
-          }
+          _konsole = !_konsole;
+        }
+        if (e.key.keysym.sym == SDLK_RETURN)
+        {
+          prev_commands.push_back(path);
+          console_parser();
+        }
+        if (!_konsole)
+        {
+          // commands that work only of console
         }
       }
       _camera.update_camera(elapsed_seconds.count() * 1000.f);
@@ -249,8 +260,13 @@ void VulkanEngine::run()
     ImGui::NewFrame();
 
     // imgui commands
-
-    ImGui::Text("Framerate: %f", 60 / frame_time.count());
+    if (_konsole)
+    {
+      ImGui::InputTextWithHint("", "", path.data(), 1024);
+    }
+    ImGui::Text("Framerate: %f", 1 / frame_time.count());
+    ImGui::Text("%s", _konsole ? "true" : "false");
+    cout << _konsole;
     draw();
   }
 }
@@ -270,7 +286,7 @@ void VulkanEngine::init_vulkan()
   vkb::InstanceBuilder builder;
 
   // make the vulkan instance, with basic debug features
-  auto inst_ret = builder.set_app_name("Example Vulkan Application")
+  auto inst_ret = builder.set_app_name("Vulkan Application")
                       .request_validation_layers(bUseValidationLayers)
                       .use_default_debug_messenger()
                       .require_api_version(1, 1, 0)
@@ -818,7 +834,8 @@ void VulkanEngine::load_meshes()
 
   // load the monkey
   Mesh monkeyMesh{};
-  monkeyMesh.load_from_obj("assets/monkey_smooth.obj");
+  monkeyMesh.load_from_obj("assets/monkey_flat.obj");
+  // monkeyMesh._vertices[0].position *= _selectedShader;
 
   Mesh lostEmpire{};
   lostEmpire.load_from_obj("assets/lost_empire.obj");
@@ -1050,19 +1067,19 @@ void VulkanEngine::draw_objects(VkCommandBuffer cmd, RenderObject *first, int co
 
 void VulkanEngine::init_scene()
 {
-  RenderObject monkey;
-  monkey.mesh = get_mesh("monkey");
-  monkey.material = get_material("defaultmesh");
-  monkey.transformMatrix = glm::mat4{1.0f};
+  // RenderObject monkey;
+  // monkey.mesh = get_mesh("monkey");
+  // monkey.material = get_material("defaultmesh");
+  // monkey.transformMatrix = glm::mat4{1.0f};
 
-  _renderables.push_back(monkey);
+  // _renderables.push_back(monkey);
 
-  RenderObject map;
-  map.mesh = get_mesh("empire");
-  map.material = get_material("texturedmesh");
-  map.transformMatrix = glm::translate(glm::vec3{5, -10, 0}); // glm::mat4{ 1.0f };
+  // RenderObject map;
+  // map.mesh = get_mesh("empire");
+  // map.material = get_material("texturedmesh");
+  // map.transformMatrix = glm::translate(glm::vec3{5, -10, 0}); // glm::mat4{ 1.0f };
 
-  _renderables.push_back(map);
+  // _renderables.push_back(map);
 
   for (int x = -20; x <= 20; x++)
   {
@@ -1093,20 +1110,19 @@ void VulkanEngine::init_scene()
 
   VkSamplerCreateInfo samplerInfo = vkinit::sampler_create_info(VK_FILTER_NEAREST);
 
-  VkSampler blockySampler;
-  vkCreateSampler(_device, &samplerInfo, nullptr, &blockySampler);
+  vkCreateSampler(_device, &samplerInfo, nullptr, &_blockySampler);
 
   _mainDeletionQueue.push_function([=]()
-                                   { vkDestroySampler(_device, blockySampler, nullptr); });
+                                   { vkDestroySampler(_device, _blockySampler, nullptr); });
 
-  VkDescriptorImageInfo imageBufferInfo;
-  imageBufferInfo.sampler = blockySampler;
-  imageBufferInfo.imageView = _loadedTextures["empire_diffuse"].imageView;
-  imageBufferInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+  // VkDescriptorImageInfo imageBufferInfo;
+  // imageBufferInfo.sampler = blockySampler;
+  // imageBufferInfo.imageView = _loadedTextures["empire_diffuse"].imageView;
+  // imageBufferInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
 
-  VkWriteDescriptorSet texture1 = vkinit::write_descriptor_image(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, texturedMat->textureSet, &imageBufferInfo, 0);
+  // VkWriteDescriptorSet texture1 = vkinit::write_descriptor_image(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, texturedMat->textureSet, &imageBufferInfo, 0);
 
-  vkUpdateDescriptorSets(_device, 1, &texture1, 0, nullptr);
+  // vkUpdateDescriptorSets(_device, 1, &texture1, 0, nullptr);
 }
 
 AllocatedBuffer VulkanEngine::create_buffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memoryUsage)
@@ -1362,4 +1378,47 @@ void VulkanEngine::init_imgui()
 
 		vkDestroyDescriptorPool(_device, imguiPool, nullptr);
 		ImGui_ImplVulkan_Shutdown(); });
+}
+
+void VulkanEngine::init_scene2()
+{
+  RenderObject obj;
+  obj.mesh = get_mesh(path.data());
+  obj.material = get_material("defaultmesh");
+  obj.transformMatrix = glm::mat4{1.0f};
+
+  _renderables.push_back(obj);
+
+  Material *texturedMat = get_material("texturedmesh");
+
+  VkDescriptorImageInfo imageBufferInfo;
+  imageBufferInfo.sampler = _blockySampler;
+  imageBufferInfo.imageView = _loadedTextures["empire_diffuse"].imageView;
+  imageBufferInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+
+  VkWriteDescriptorSet texture1 = vkinit::write_descriptor_image(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, texturedMat->textureSet, &imageBufferInfo, 0);
+  vkUpdateDescriptorSets(_device, 1, &texture1, 0, nullptr);
+}
+
+void VulkanEngine::load_meshes2()
+{
+
+  // load the monkey
+  Mesh pathMesh{};
+  pathMesh.load_from_obj(path.data());
+  // monkeyMesh._vertices[0].position *= _selectedShader;
+
+  upload_mesh(pathMesh);
+
+  _meshes[path.data()] = pathMesh;
+}
+
+void VulkanEngine::console_parser()
+{
+  if (path.rfind("assets", 0))
+  {
+    // path.erase(0, 4);
+    load_meshes2();
+    init_scene2();
+  }
 }

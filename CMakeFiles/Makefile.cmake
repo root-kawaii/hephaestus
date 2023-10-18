@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.6/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "asset_core/CMakeLists.txt"
   "src/CMakeLists.txt"
   "third_party/CMakeLists.txt"
   "/opt/homebrew/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCInformation.cmake"
@@ -49,6 +50,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "third_party/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "asset_core/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -58,5 +60,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "third_party/CMakeFiles/vkbootstrap.dir/DependInfo.cmake"
   "third_party/CMakeFiles/tinyobjloader.dir/DependInfo.cmake"
   "third_party/CMakeFiles/imgui.dir/DependInfo.cmake"
-  "src/CMakeFiles/vulkan_guide.dir/DependInfo.cmake"
+  "asset_core/CMakeFiles/asset_core.dir/DependInfo.cmake"
+  "src/CMakeFiles/hephaestus.dir/DependInfo.cmake"
   )

@@ -6,6 +6,9 @@
 /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/CMakeFiles/imgui.dir
 /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/CMakeFiles/edit_cache.dir
 /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/CMakeFiles/rebuild_cache.dir
-/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/CMakeFiles/vulkan_guide.dir
+/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core/CMakeFiles/asset_core.dir
+/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core/CMakeFiles/edit_cache.dir
+/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core/CMakeFiles/rebuild_cache.dir
+/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/CMakeFiles/hephaestus.dir
 /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/CMakeFiles/edit_cache.dir
 /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/CMakeFiles/rebuild_cache.dir

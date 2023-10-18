@@ -218,7 +218,17 @@ public:
     // returns nullptr if it cant be found
     Mesh *get_mesh(const std::string &name);
 
+    VkSampler _blockySampler;
+
+    bool _konsole = false;
+
+    void console_parser();
+
     void init_imgui();
+
+    void init_scene2();
+
+    void load_meshes2();
 
     // our draw function
     void draw_objects(VkCommandBuffer cmd, RenderObject *first, int count);
