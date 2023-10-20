@@ -3,12 +3,13 @@
 
 #pragma once
 
-#include <player_camera.h>
+#include <vk_char_control.h>
 #include <vk_types.h>
 #include <vector>
 #include <functional>
 #include <deque>
 #include <vk_mesh.h>
+#include <player_camera.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
@@ -18,6 +19,8 @@
 
 // vulkan_guide.h : Include file for standard system include files,
 // or project specific include files.
+struct Movement;
+struct PlayerCamera;
 
 class PipelineBuilder
 {
@@ -136,7 +139,8 @@ class VulkanEngine
 {
 
 public:
-    int _mode{0};
+    RenderObject *_mainChar;
+    int _mode{0}; // 0 is conole, 1 is freecam, 2 is playmode
     bool _isInitialized{false};
     int _frameNumber{0};
     int _selectedShader{0};
@@ -146,6 +150,7 @@ public:
     struct SDL_Window *_window{nullptr};
 
     PlayerCamera _camera;
+    Movement _mover;
 
     VkInstance _instance;
     VkDebugUtilsMessengerEXT _debug_messenger;

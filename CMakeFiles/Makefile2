@@ -54,10 +54,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -137,14 +137,14 @@ third_party/clean: third_party/CMakeFiles/imgui.dir/clean
 CMakeFiles/Shaders.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shaders.dir/build.make CMakeFiles/Shaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target Shaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target Shaders"
 .PHONY : CMakeFiles/Shaders.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Shaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Shaders.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 0
 .PHONY : CMakeFiles/Shaders.dir/rule
 
 # Convenience name for target.
@@ -163,14 +163,14 @@ CMakeFiles/Shaders.dir/clean:
 third_party/CMakeFiles/vkbootstrap.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/vkbootstrap.dir/build.make third_party/CMakeFiles/vkbootstrap.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/vkbootstrap.dir/build.make third_party/CMakeFiles/vkbootstrap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=27,28 "Built target vkbootstrap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=28,29 "Built target vkbootstrap"
 .PHONY : third_party/CMakeFiles/vkbootstrap.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/CMakeFiles/vkbootstrap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/vkbootstrap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 0
 .PHONY : third_party/CMakeFiles/vkbootstrap.dir/rule
 
 # Convenience name for target.
@@ -189,14 +189,14 @@ third_party/CMakeFiles/vkbootstrap.dir/clean:
 third_party/CMakeFiles/tinyobjloader.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/tinyobjloader.dir/build.make third_party/CMakeFiles/tinyobjloader.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/tinyobjloader.dir/build.make third_party/CMakeFiles/tinyobjloader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=25,26 "Built target tinyobjloader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=26,27 "Built target tinyobjloader"
 .PHONY : third_party/CMakeFiles/tinyobjloader.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/CMakeFiles/tinyobjloader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/tinyobjloader.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 0
 .PHONY : third_party/CMakeFiles/tinyobjloader.dir/rule
 
 # Convenience name for target.
@@ -215,14 +215,14 @@ third_party/CMakeFiles/tinyobjloader.dir/clean:
 third_party/CMakeFiles/imgui.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/CMakeFiles/imgui.dir/build.make third_party/CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=18,19,20,21,22,23,24 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=19,20,21,22,23,24,25 "Built target imgui"
 .PHONY : third_party/CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/CMakeFiles/imgui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/CMakeFiles/imgui.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 0
 .PHONY : third_party/CMakeFiles/imgui.dir/rule
 
 # Convenience name for target.
@@ -241,14 +241,14 @@ third_party/CMakeFiles/imgui.dir/clean:
 asset_core/CMakeFiles/asset_core.dir/all:
 	$(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=9,10 "Built target asset_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=9,10 "Built target asset_core"
 .PHONY : asset_core/CMakeFiles/asset_core.dir/all
 
 # Build rule for subdir invocation for target.
 asset_core/CMakeFiles/asset_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/CMakeFiles/asset_core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 0
 .PHONY : asset_core/CMakeFiles/asset_core.dir/rule
 
 # Convenience name for target.
@@ -270,14 +270,14 @@ src/CMakeFiles/hephaestus.dir/all: third_party/CMakeFiles/tinyobjloader.dir/all
 src/CMakeFiles/hephaestus.dir/all: third_party/CMakeFiles/imgui.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=11,12,13,14,15,16,17 "Built target hephaestus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=11,12,13,14,15,16,17,18 "Built target hephaestus"
 .PHONY : src/CMakeFiles/hephaestus.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/hephaestus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 27
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/hephaestus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 0
 .PHONY : src/CMakeFiles/hephaestus.dir/rule
 
 # Convenience name for target.

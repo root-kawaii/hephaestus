@@ -15,6 +15,7 @@
 
 #include <vk_types.h>
 #include <vk_initializers.h>
+#include <vk_char_control.h>
 
 #include "VkBootstrap.h"
 
@@ -86,7 +87,8 @@ void VulkanEngine::init()
   _isInitialized = true;
 
   _camera = {};
-  _camera.position = {0.f, 6.f, 5.f};
+  _camera.position = {0.f, 3.f, -2.f};
+  _mainChar = &_renderables[_renderables.size() - 1];
 }
 void VulkanEngine::cleanup()
 {
@@ -232,6 +234,12 @@ void VulkanEngine::run()
       {
         _camera.process_input_event(&e);
       }
+      if (_mode == 2)
+      {
+        // _camera._obj = _renderables[_renderables.size() - 1];
+
+        _mover.move(_mainChar, &e, &_camera);
+      }
       if (e.type == SDL_QUIT)
       {
         bQuit = true;
@@ -241,39 +249,20 @@ void VulkanEngine::run()
 
         if (e.key.keysym.sym == SDLK_1)
         {
-          _mode = 0;
+          _mode = 0; // konsole
         }
         if (e.key.keysym.sym == SDLK_2)
         {
-          _mode = 1;
+          _mode = 1; // freecamera
         }
         if (e.key.keysym.sym == SDLK_3)
         {
-          _mode = 2;
+          _mode = 2; // playmode
         }
         if (e.key.keysym.sym == SDLK_RETURN)
         {
           prev_commands.push_back(path);
           console_parser();
-        }
-        if (_mode == 2)
-        {
-          if (e.key.keysym.sym == SDLK_w)
-          {
-            glm::vec3 velocity = {0.01f, 0, 0};
-            _renderables[_renderables.size() - 1].position += velocity;
-            glm::mat4 translation = glm::translate(glm::mat4{1.0}, _renderables[_renderables.size() - 1].position);
-            glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(1, 1, 1));
-            _renderables[_renderables.size() - 1].transformMatrix = translation * scale;
-          }
-          if (e.key.keysym.sym == SDLK_s)
-          {
-            glm::vec3 velocity = {-0.01f, 0, 0};
-            _renderables[_renderables.size() - 1].position += velocity;
-            glm::mat4 translation = glm::translate(glm::mat4{1.0}, _renderables[_renderables.size() - 1].position);
-            glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(1, 1, 1));
-            _renderables[_renderables.size() - 1].transformMatrix = translation * scale;
-          }
         }
       }
       _camera.update_camera(elapsed_seconds.count() * 1000.f);
@@ -1094,12 +1083,6 @@ void VulkanEngine::draw_objects(VkCommandBuffer cmd, RenderObject *first, int co
 
 void VulkanEngine::init_scene()
 {
-  // RenderObject monkey;
-  // monkey.mesh = get_mesh("monkey");
-  // monkey.material = get_material("defaultmesh");
-  // monkey.transformMatrix = glm::mat4{1.0f};
-
-  // _renderables.push_back(monkey);
 
   // RenderObject map;
   // map.mesh = get_mesh("empire");
@@ -1124,6 +1107,14 @@ void VulkanEngine::init_scene()
       _renderables.push_back(tri);
     }
   }
+
+  RenderObject monkey;
+  monkey.mesh = get_mesh("monkey");
+  monkey.material = get_material("defaultmesh");
+  monkey.transformMatrix = glm::mat4{1.0f};
+  monkey.position = {0, 0, 0};
+
+  _renderables.push_back(monkey);
 
   Material *texturedMat = get_material("texturedmesh");
 

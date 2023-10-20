@@ -1,7 +1,7 @@
 third_party/CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.o: \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imgui_demo.cpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imgui.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imconfig.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imgui_demo.cpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imgui.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imconfig.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/float.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config_site \

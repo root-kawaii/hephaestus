@@ -1184,7 +1184,6 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_vulkan.cpp.o: third_party/imgu
   /usr/local/include/vk_video/vulkan_video_codec_h264std_decode.h \
   /usr/local/include/vk_video/vulkan_video_codec_h265std.h \
   /usr/local/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /usr/local/include/vk_video/vulkan_video_codecs_common.h \
   /usr/local/include/vulkan/vk_platform.h \
   /usr/local/include/vulkan/vulkan.h \
   /usr/local/include/vulkan/vulkan_core.h
@@ -1581,8 +1580,6 @@ third_party/imgui/imgui.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_va_list.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_uintptr_t.h:
-
-/usr/local/include/vk_video/vulkan_video_codecs_common.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_ucontext.h:
 

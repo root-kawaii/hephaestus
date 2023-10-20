@@ -1,6 +1,6 @@
 third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.o: \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/tinyobjloader/tiny_obj_loader.cc \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/tinyobjloader/tiny_obj_loader.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/tinyobjloader/tiny_obj_loader.cc \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/tinyobjloader/tiny_obj_loader.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/equal.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/comp.h \

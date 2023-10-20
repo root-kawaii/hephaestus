@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/hephaestus.dir/depend.make
@@ -72,86 +72,100 @@ include src/CMakeFiles/hephaestus.dir/flags.make
 src/CMakeFiles/hephaestus.dir/main.cpp.o: src/CMakeFiles/hephaestus.dir/flags.make
 src/CMakeFiles/hephaestus.dir/main.cpp.o: src/main.cpp
 src/CMakeFiles/hephaestus.dir/main.cpp.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/hephaestus.dir/main.cpp.o"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/main.cpp.o -MF CMakeFiles/hephaestus.dir/main.cpp.o.d -o CMakeFiles/hephaestus.dir/main.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/hephaestus.dir/main.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/main.cpp.o -MF CMakeFiles/hephaestus.dir/main.cpp.o.d -o CMakeFiles/hephaestus.dir/main.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/main.cpp
 
 src/CMakeFiles/hephaestus.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/main.cpp.i"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/main.cpp > CMakeFiles/hephaestus.dir/main.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/main.cpp > CMakeFiles/hephaestus.dir/main.cpp.i
 
 src/CMakeFiles/hephaestus.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/main.cpp.s"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/main.cpp -o CMakeFiles/hephaestus.dir/main.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/main.cpp -o CMakeFiles/hephaestus.dir/main.cpp.s
 
 src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: src/CMakeFiles/hephaestus.dir/flags.make
 src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: src/vk_engine.cpp
 src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o -MF CMakeFiles/hephaestus.dir/vk_engine.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_engine.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_engine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o -MF CMakeFiles/hephaestus.dir/vk_engine.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_engine.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_engine.cpp
 
 src/CMakeFiles/hephaestus.dir/vk_engine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/vk_engine.cpp.i"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_engine.cpp > CMakeFiles/hephaestus.dir/vk_engine.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_engine.cpp > CMakeFiles/hephaestus.dir/vk_engine.cpp.i
 
 src/CMakeFiles/hephaestus.dir/vk_engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/vk_engine.cpp.s"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_engine.cpp -o CMakeFiles/hephaestus.dir/vk_engine.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_engine.cpp -o CMakeFiles/hephaestus.dir/vk_engine.cpp.s
 
 src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o: src/CMakeFiles/hephaestus.dir/flags.make
 src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o: src/vk_initializers.cpp
 src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o -MF CMakeFiles/hephaestus.dir/vk_initializers.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_initializers.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_initializers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o -MF CMakeFiles/hephaestus.dir/vk_initializers.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_initializers.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_initializers.cpp
 
 src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/vk_initializers.cpp.i"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_initializers.cpp > CMakeFiles/hephaestus.dir/vk_initializers.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_initializers.cpp > CMakeFiles/hephaestus.dir/vk_initializers.cpp.i
 
 src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/vk_initializers.cpp.s"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_initializers.cpp -o CMakeFiles/hephaestus.dir/vk_initializers.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_initializers.cpp -o CMakeFiles/hephaestus.dir/vk_initializers.cpp.s
 
 src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o: src/CMakeFiles/hephaestus.dir/flags.make
 src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o: src/vk_mesh.cpp
 src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o -MF CMakeFiles/hephaestus.dir/vk_mesh.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_mesh.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o -MF CMakeFiles/hephaestus.dir/vk_mesh.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_mesh.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_mesh.cpp
 
 src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/vk_mesh.cpp.i"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_mesh.cpp > CMakeFiles/hephaestus.dir/vk_mesh.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_mesh.cpp > CMakeFiles/hephaestus.dir/vk_mesh.cpp.i
 
 src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/vk_mesh.cpp.s"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_mesh.cpp -o CMakeFiles/hephaestus.dir/vk_mesh.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_mesh.cpp -o CMakeFiles/hephaestus.dir/vk_mesh.cpp.s
 
 src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: src/CMakeFiles/hephaestus.dir/flags.make
 src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: src/vk_textures.cpp
 src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o -MF CMakeFiles/hephaestus.dir/vk_textures.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_textures.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_textures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o -MF CMakeFiles/hephaestus.dir/vk_textures.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_textures.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_textures.cpp
 
 src/CMakeFiles/hephaestus.dir/vk_textures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/vk_textures.cpp.i"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_textures.cpp > CMakeFiles/hephaestus.dir/vk_textures.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_textures.cpp > CMakeFiles/hephaestus.dir/vk_textures.cpp.i
 
 src/CMakeFiles/hephaestus.dir/vk_textures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/vk_textures.cpp.s"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_textures.cpp -o CMakeFiles/hephaestus.dir/vk_textures.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_textures.cpp -o CMakeFiles/hephaestus.dir/vk_textures.cpp.s
 
 src/CMakeFiles/hephaestus.dir/player_camera.cpp.o: src/CMakeFiles/hephaestus.dir/flags.make
 src/CMakeFiles/hephaestus.dir/player_camera.cpp.o: src/player_camera.cpp
 src/CMakeFiles/hephaestus.dir/player_camera.cpp.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/hephaestus.dir/player_camera.cpp.o"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/player_camera.cpp.o -MF CMakeFiles/hephaestus.dir/player_camera.cpp.o.d -o CMakeFiles/hephaestus.dir/player_camera.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/player_camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/hephaestus.dir/player_camera.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/player_camera.cpp.o -MF CMakeFiles/hephaestus.dir/player_camera.cpp.o.d -o CMakeFiles/hephaestus.dir/player_camera.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/player_camera.cpp
 
 src/CMakeFiles/hephaestus.dir/player_camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/player_camera.cpp.i"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/player_camera.cpp > CMakeFiles/hephaestus.dir/player_camera.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/player_camera.cpp > CMakeFiles/hephaestus.dir/player_camera.cpp.i
 
 src/CMakeFiles/hephaestus.dir/player_camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/player_camera.cpp.s"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/player_camera.cpp -o CMakeFiles/hephaestus.dir/player_camera.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/player_camera.cpp -o CMakeFiles/hephaestus.dir/player_camera.cpp.s
+
+src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o: src/CMakeFiles/hephaestus.dir/flags.make
+src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o: src/vk_char_control.cpp
+src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o -MF CMakeFiles/hephaestus.dir/vk_char_control.cpp.o.d -o CMakeFiles/hephaestus.dir/vk_char_control.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.cpp
+
+src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/vk_char_control.cpp.i"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.cpp > CMakeFiles/hephaestus.dir/vk_char_control.cpp.i
+
+src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/vk_char_control.cpp.s"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.cpp -o CMakeFiles/hephaestus.dir/vk_char_control.cpp.s
 
 # Object files for target hephaestus
 hephaestus_OBJECTS = \
@@ -160,7 +174,8 @@ hephaestus_OBJECTS = \
 "CMakeFiles/hephaestus.dir/vk_initializers.cpp.o" \
 "CMakeFiles/hephaestus.dir/vk_mesh.cpp.o" \
 "CMakeFiles/hephaestus.dir/vk_textures.cpp.o" \
-"CMakeFiles/hephaestus.dir/player_camera.cpp.o"
+"CMakeFiles/hephaestus.dir/player_camera.cpp.o" \
+"CMakeFiles/hephaestus.dir/vk_char_control.cpp.o"
 
 # External object files for target hephaestus
 hephaestus_EXTERNAL_OBJECTS =
@@ -171,24 +186,25 @@ bin/hephaestus: src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/player_camera.cpp.o
+bin/hephaestus: src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/build.make
 bin/hephaestus: third_party/libvkbootstrap.a
 bin/hephaestus: third_party/libtinyobjloader.a
 bin/hephaestus: third_party/libimgui.a
 bin/hephaestus: /usr/local/lib/libvulkan.dylib
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/hephaestus"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hephaestus.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../bin/hephaestus"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hephaestus.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/hephaestus.dir/build: bin/hephaestus
 .PHONY : src/CMakeFiles/hephaestus.dir/build
 
 src/CMakeFiles/hephaestus.dir/clean:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src && $(CMAKE_COMMAND) -P CMakeFiles/hephaestus.dir/cmake_clean.cmake
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && $(CMAKE_COMMAND) -P CMakeFiles/hephaestus.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/hephaestus.dir/clean
 
 src/CMakeFiles/hephaestus.dir/depend:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/CMakeFiles/hephaestus.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/CMakeFiles/hephaestus.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/hephaestus.dir/depend
 

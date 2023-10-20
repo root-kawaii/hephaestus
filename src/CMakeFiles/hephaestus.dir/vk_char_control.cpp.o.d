@@ -1,50 +1,5 @@
-src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_textures.cpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_textures.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_types.h \
-  /usr/local/include/vulkan/vulkan.h \
-  /usr/local/include/vulkan/vk_platform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config_site \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/__stddef_max_align_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int8_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int16_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int32_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int64_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint8_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint16_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint32_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint64_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/cdefs.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_symbol_aliasing.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_posix_availability.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/machine/_types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/_types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_pthread/_pthread_types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_intptr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/machine/types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int8_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int16_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int32_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int64_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_uintptr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_intmax_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uintmax_t.h \
-  /usr/local/include/vulkan/vulkan_core.h \
-  /usr/local/include/vk_video/vulkan_video_codec_h264std.h \
-  /usr/local/include/vk_video/vulkan_video_codec_h264std_decode.h \
-  /usr/local/include/vk_video/vulkan_video_codec_h265std.h \
-  /usr/local/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/vma/vk_mem_alloc.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_engine.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.h \
+src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o: \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.cpp \
   /opt/homebrew/include/SDL2/SDL.h /opt/homebrew/include/SDL2/SDL_main.h \
   /opt/homebrew/include/SDL2/SDL_stdinc.h \
   /opt/homebrew/include/SDL2/SDL_config.h \
@@ -59,11 +14,41 @@ src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: \
   /opt/homebrew/include/SDL2/close_code.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/appleapiopts.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/cdefs.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_symbol_aliasing.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_posix_availability.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/machine/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_intptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_uintptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/machine/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_pthread/_pthread_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/machine/endian.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/endian.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_endian.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/libkern/_OSByteOrder.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/libkern/arm/OSByteOrder.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config_site \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_intmax_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uintmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/arch.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_char.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_short.h \
@@ -141,6 +126,9 @@ src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_wchar_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/malloc/_malloc.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/malloc/_malloc_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/string.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/string.h \
@@ -346,6 +334,7 @@ src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: \
   /opt/homebrew/include/SDL2/SDL_version.h \
   /opt/homebrew/include/SDL2/SDL_locale.h \
   /opt/homebrew/include/SDL2/SDL_misc.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.h \
   /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/glm.hpp \
   /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/_fixes.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cmath \
@@ -500,6 +489,42 @@ src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: \
   /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/integer.hpp \
   /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_integer.inl \
   /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/player_camera.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_types.h \
+  /usr/local/include/vulkan/vulkan.h \
+  /usr/local/include/vulkan/vk_platform.h \
+  /usr/local/include/vulkan/vulkan_core.h \
+  /usr/local/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/local/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/local/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/local/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/vma/vk_mem_alloc.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/transform.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../glm.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/matrix_transform.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../mat4x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_projection.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../gtc/constants.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/scalar_constants.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/scalar_constants.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/constants.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../geometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../trigonometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../matrix.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_projection.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_clip_space.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../ext/scalar_constants.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_clip_space.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_transform.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_transform.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/matrix_transform.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../geometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../trigonometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../matrix.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/transform.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_engine.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \
@@ -976,37 +1001,10 @@ src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/literals.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/deque \
   /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_mesh.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/transform.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../glm.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/matrix_transform.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../mat4x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_projection.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../gtc/constants.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/scalar_constants.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/scalar_constants.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/constants.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../geometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../trigonometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../matrix.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_projection.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_clip_space.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../ext/scalar_constants.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_clip_space.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_transform.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_transform.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/matrix_transform.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../geometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../trigonometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../matrix.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/transform.inl \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ios/fpos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iostream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ios \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__locale \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/locale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/locale.h \
@@ -1030,11 +1028,29 @@ src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/streambuf \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/nl_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdarg \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_initializers.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/stb_image/stb_image.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/filesystem \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iomanip \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iostream

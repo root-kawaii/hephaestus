@@ -1,4 +1,4 @@
-# Install script for directory: /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src
+# Install script for directory: /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # Include any dependencies generated for this target.
 include asset_core/CMakeFiles/asset_core.dir/depend.make
@@ -72,16 +72,16 @@ include asset_core/CMakeFiles/asset_core.dir/flags.make
 asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o: asset_core/CMakeFiles/asset_core.dir/flags.make
 asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o: asset_core/asset_main.cpp
 asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o: asset_core/CMakeFiles/asset_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o -MF CMakeFiles/asset_core.dir/asset_main.cpp.o.d -o CMakeFiles/asset_core.dir/asset_main.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core/asset_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o -MF CMakeFiles/asset_core.dir/asset_main.cpp.o.d -o CMakeFiles/asset_core.dir/asset_main.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core/asset_main.cpp
 
 asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/asset_core.dir/asset_main.cpp.i"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core/asset_main.cpp > CMakeFiles/asset_core.dir/asset_main.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core/asset_main.cpp > CMakeFiles/asset_core.dir/asset_main.cpp.i
 
 asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/asset_core.dir/asset_main.cpp.s"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core/asset_main.cpp -o CMakeFiles/asset_core.dir/asset_main.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core/asset_main.cpp -o CMakeFiles/asset_core.dir/asset_main.cpp.s
 
 # Object files for target asset_core
 asset_core_OBJECTS = \
@@ -93,19 +93,19 @@ asset_core_EXTERNAL_OBJECTS =
 asset_core/libasset_core.a: asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o
 asset_core/libasset_core.a: asset_core/CMakeFiles/asset_core.dir/build.make
 asset_core/libasset_core.a: asset_core/CMakeFiles/asset_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libasset_core.a"
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core && $(CMAKE_COMMAND) -P CMakeFiles/asset_core.dir/cmake_clean_target.cmake
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/asset_core.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libasset_core.a"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core && $(CMAKE_COMMAND) -P CMakeFiles/asset_core.dir/cmake_clean_target.cmake
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/asset_core.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 asset_core/CMakeFiles/asset_core.dir/build: asset_core/libasset_core.a
 .PHONY : asset_core/CMakeFiles/asset_core.dir/build
 
 asset_core/CMakeFiles/asset_core.dir/clean:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core && $(CMAKE_COMMAND) -P CMakeFiles/asset_core.dir/cmake_clean.cmake
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core && $(CMAKE_COMMAND) -P CMakeFiles/asset_core.dir/cmake_clean.cmake
 .PHONY : asset_core/CMakeFiles/asset_core.dir/clean
 
 asset_core/CMakeFiles/asset_core.dir/depend:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core/CMakeFiles/asset_core.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core/CMakeFiles/asset_core.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : asset_core/CMakeFiles/asset_core.dir/depend
 

@@ -1,7 +1,7 @@
 third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o: \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imgui_draw.cpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imgui.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imconfig.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imgui_draw.cpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imgui.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imconfig.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/float.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config_site \
@@ -87,7 +87,7 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/malloc/_malloc_type.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_dev_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imgui_internal.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imgui_internal.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_stdio.h \
@@ -240,6 +240,6 @@ third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/_limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/syslimits.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imstb_textedit.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imstb_rectpack.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imstb_truetype.h
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imstb_textedit.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imstb_rectpack.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imstb_truetype.h

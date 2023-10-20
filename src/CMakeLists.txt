@@ -13,6 +13,8 @@ add_executable(hephaestus
     vk_textures.cpp
     player_camera.h
     player_camera.cpp
+    vk_char_control.cpp
+    vk_char_control.h
     )
 
 

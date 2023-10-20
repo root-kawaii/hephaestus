@@ -1,7 +1,7 @@
 src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_engine.cpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_textures.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_types.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_engine.cpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_textures.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_types.h \
   /usr/local/include/vulkan/vulkan.h \
   /usr/local/include/vulkan/vk_platform.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stddef.h \
@@ -42,10 +42,10 @@ src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: \
   /usr/local/include/vk_video/vulkan_video_codec_h264std_decode.h \
   /usr/local/include/vk_video/vulkan_video_codec_h265std.h \
   /usr/local/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/vma/vk_mem_alloc.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_engine.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/player_camera.h \
-  /opt/homebrew/include/SDL2/SDL_events.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/vma/vk_mem_alloc.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_engine.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.h \
+  /opt/homebrew/include/SDL2/SDL.h /opt/homebrew/include/SDL2/SDL_main.h \
   /opt/homebrew/include/SDL2/SDL_stdinc.h \
   /opt/homebrew/include/SDL2/SDL_config.h \
   /opt/homebrew/include/SDL2/SDL_platform.h \
@@ -301,12 +301,22 @@ src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/float.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/float.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/float.h \
+  /opt/homebrew/include/SDL2/SDL_assert.h \
+  /opt/homebrew/include/SDL2/SDL_atomic.h \
+  /opt/homebrew/include/SDL2/SDL_audio.h \
   /opt/homebrew/include/SDL2/SDL_error.h \
+  /opt/homebrew/include/SDL2/SDL_endian.h \
+  /opt/homebrew/include/SDL2/SDL_mutex.h \
+  /opt/homebrew/include/SDL2/SDL_thread.h \
+  /opt/homebrew/include/SDL2/SDL_rwops.h \
+  /opt/homebrew/include/SDL2/SDL_clipboard.h \
+  /opt/homebrew/include/SDL2/SDL_cpuinfo.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/arm_neon.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/arm_bf16.h \
+  /opt/homebrew/include/SDL2/SDL_events.h \
   /opt/homebrew/include/SDL2/SDL_video.h \
   /opt/homebrew/include/SDL2/SDL_pixels.h \
-  /opt/homebrew/include/SDL2/SDL_endian.h \
   /opt/homebrew/include/SDL2/SDL_rect.h \
-  /opt/homebrew/include/SDL2/SDL_rwops.h \
   /opt/homebrew/include/SDL2/SDL_surface.h \
   /opt/homebrew/include/SDL2/SDL_blendmode.h \
   /opt/homebrew/include/SDL2/SDL_keyboard.h \
@@ -315,19 +325,34 @@ src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: \
   /opt/homebrew/include/SDL2/SDL_mouse.h \
   /opt/homebrew/include/SDL2/SDL_joystick.h \
   /opt/homebrew/include/SDL2/SDL_guid.h \
-  /opt/homebrew/include/SDL2/SDL_mutex.h \
   /opt/homebrew/include/SDL2/SDL_gamecontroller.h \
   /opt/homebrew/include/SDL2/SDL_sensor.h \
   /opt/homebrew/include/SDL2/SDL_quit.h \
   /opt/homebrew/include/SDL2/SDL_gesture.h \
   /opt/homebrew/include/SDL2/SDL_touch.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/glm.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/_fixes.hpp \
+  /opt/homebrew/include/SDL2/SDL_filesystem.h \
+  /opt/homebrew/include/SDL2/SDL_haptic.h \
+  /opt/homebrew/include/SDL2/SDL_hidapi.h \
+  /opt/homebrew/include/SDL2/SDL_hints.h \
+  /opt/homebrew/include/SDL2/SDL_loadso.h \
+  /opt/homebrew/include/SDL2/SDL_log.h \
+  /opt/homebrew/include/SDL2/SDL_messagebox.h \
+  /opt/homebrew/include/SDL2/SDL_metal.h \
+  /opt/homebrew/include/SDL2/SDL_power.h \
+  /opt/homebrew/include/SDL2/SDL_render.h \
+  /opt/homebrew/include/SDL2/SDL_shape.h \
+  /opt/homebrew/include/SDL2/SDL_system.h \
+  /opt/homebrew/include/SDL2/SDL_timer.h \
+  /opt/homebrew/include/SDL2/SDL_version.h \
+  /opt/homebrew/include/SDL2/SDL_locale.h \
+  /opt/homebrew/include/SDL2/SDL_misc.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/glm.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/_fixes.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cmath \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/setup.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/setup.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cassert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/assert.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/../simd/platform.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/../simd/platform.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/climits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/limits.h \
@@ -337,143 +362,144 @@ src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/_limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/syslimits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cfloat \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/fwd.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/qualifier.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/vec2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_bool2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_vec2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_vec2.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/./compute_vector_relational.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_bool2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_float2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_float2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_double2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_double2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_int2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_int2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_uint2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_uint2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/vec3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_bool3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_vec3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_vec3.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/compute_vector_relational.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_bool3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_float3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_float3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_double3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_double3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_int3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_int3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_uint3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_uint3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/vec4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_bool4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_vec4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_vec4.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_bool4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_float4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_float4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_double4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_double4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/setup.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_int4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_int4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_uint4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/vector_uint4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat2x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double2x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat2x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_vec2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat2x2.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/../matrix.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat2x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double2x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat2x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_vec3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat2x3.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double2x3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float2x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float2x3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat2x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double2x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat2x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_vec4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat2x4.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double2x4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float2x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float2x4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat3x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double3x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat3x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat3x2.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double3x2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float3x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float3x2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat3x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double3x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat3x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat3x3.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double3x3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float3x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float3x3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat3x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double3x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat3x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat3x4.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double3x4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float3x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float3x4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat4x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double4x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat4x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat4x2.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double4x2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float4x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float4x2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat4x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double4x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat4x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat4x3.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double4x3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float4x3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float4x3_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/mat4x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double4x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../detail/type_mat4x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_mat4x4.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double4x4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float4x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float4x4_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/func_matrix.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/../geometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/func_geometric.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/../exponential.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_vec1.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_vec1.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/func_exponential.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/../vector_relational.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/func_vector_relational.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/_vectorize.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/../common.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/func_common.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/compute_common.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_double2x2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float2x2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_float2x2_precision.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/trigonometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/func_trigonometric.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/exponential.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/common.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/packing.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/func_packing.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_half.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/type_half.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/geometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/matrix.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/vector_relational.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/integer.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/detail/func_integer.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/fwd.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/qualifier.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/vec2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_bool2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_vec2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_vec2.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/./compute_vector_relational.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_bool2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_float2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_float2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_double2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_double2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_int2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_int2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_uint2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_uint2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/vec3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_bool3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_vec3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_vec3.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/compute_vector_relational.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_bool3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_float3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_float3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_double3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_double3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_int3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_int3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_uint3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_uint3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/vec4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_bool4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_vec4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_vec4.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_bool4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_float4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_float4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_double4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_double4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/setup.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_int4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_int4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_uint4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/vector_uint4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat2x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double2x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat2x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_vec2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat2x2.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/../matrix.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat2x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double2x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat2x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_vec3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat2x3.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double2x3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float2x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float2x3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat2x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double2x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat2x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_vec4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat2x4.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double2x4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float2x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float2x4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat3x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double3x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat3x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat3x2.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double3x2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float3x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float3x2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat3x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double3x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat3x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat3x3.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double3x3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float3x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float3x3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat3x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double3x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat3x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat3x4.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double3x4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float3x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float3x4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat4x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double4x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat4x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat4x2.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double4x2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float4x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float4x2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat4x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double4x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat4x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat4x3.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double4x3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float4x3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float4x3_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/mat4x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double4x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../detail/type_mat4x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_mat4x4.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double4x4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float4x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float4x4_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_matrix.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/../geometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_geometric.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/../exponential.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_vec1.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_vec1.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_exponential.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/../vector_relational.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_vector_relational.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/_vectorize.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/../common.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_common.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/compute_common.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_double2x2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float2x2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_float2x2_precision.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/trigonometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_trigonometric.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/exponential.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/common.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/packing.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_packing.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_half.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/type_half.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/geometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/matrix.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/vector_relational.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/integer.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/detail/func_integer.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/player_camera.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \
@@ -949,33 +975,33 @@ src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/literals.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/deque \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_mesh.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/transform.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../glm.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/matrix_transform.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../mat4x4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../vec2.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../vec3.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../vec4.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../ext/matrix_projection.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../gtc/constants.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../ext/scalar_constants.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/scalar_constants.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/constants.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../geometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../trigonometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../matrix.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_projection.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../ext/matrix_clip_space.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/../ext/scalar_constants.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_clip_space.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../ext/matrix_transform.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/./ext/matrix_transform.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/matrix_transform.inl \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../geometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../trigonometric.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/../gtc/../matrix.hpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/glm/glm/gtx/transform.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_mesh.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/transform.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../glm.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/matrix_transform.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../mat4x4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec2.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec3.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../vec4.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_projection.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../gtc/constants.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/scalar_constants.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/scalar_constants.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/constants.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../geometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../trigonometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../matrix.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_projection.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_clip_space.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/../ext/scalar_constants.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_clip_space.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../ext/matrix_transform.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/./ext/matrix_transform.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/matrix_transform.inl \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../geometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../trigonometric.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/../gtc/../matrix.hpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm/glm/gtx/transform.inl \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ios/fpos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
@@ -1029,37 +1055,12 @@ src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iostream \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imgui.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imconfig.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imgui_impl_sdl.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/imgui/imgui_impl_vulkan.h \
-  /opt/homebrew/include/SDL2/SDL.h /opt/homebrew/include/SDL2/SDL_main.h \
-  /opt/homebrew/include/SDL2/SDL_assert.h \
-  /opt/homebrew/include/SDL2/SDL_atomic.h \
-  /opt/homebrew/include/SDL2/SDL_audio.h \
-  /opt/homebrew/include/SDL2/SDL_thread.h \
-  /opt/homebrew/include/SDL2/SDL_clipboard.h \
-  /opt/homebrew/include/SDL2/SDL_cpuinfo.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/arm_neon.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/arm_bf16.h \
-  /opt/homebrew/include/SDL2/SDL_filesystem.h \
-  /opt/homebrew/include/SDL2/SDL_haptic.h \
-  /opt/homebrew/include/SDL2/SDL_hidapi.h \
-  /opt/homebrew/include/SDL2/SDL_hints.h \
-  /opt/homebrew/include/SDL2/SDL_loadso.h \
-  /opt/homebrew/include/SDL2/SDL_log.h \
-  /opt/homebrew/include/SDL2/SDL_messagebox.h \
-  /opt/homebrew/include/SDL2/SDL_metal.h \
-  /opt/homebrew/include/SDL2/SDL_power.h \
-  /opt/homebrew/include/SDL2/SDL_render.h \
-  /opt/homebrew/include/SDL2/SDL_shape.h \
-  /opt/homebrew/include/SDL2/SDL_system.h \
-  /opt/homebrew/include/SDL2/SDL_timer.h \
-  /opt/homebrew/include/SDL2/SDL_version.h \
-  /opt/homebrew/include/SDL2/SDL_locale.h \
-  /opt/homebrew/include/SDL2/SDL_misc.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imgui.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imconfig.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imgui_impl_sdl.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui/imgui_impl_vulkan.h \
   /opt/homebrew/include/SDL2/SDL_vulkan.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_initializers.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/vkbootstrap/VkBootstrap.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/vkbootstrap/VkBootstrapDispatch.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_initializers.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/vkbootstrap/VkBootstrap.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/vkbootstrap/VkBootstrapDispatch.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/shared_mutex

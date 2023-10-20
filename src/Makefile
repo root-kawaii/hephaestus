@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src//CMakeFiles/progress.marks
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 0
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src//CMakeFiles/progress.marks
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/hephaestus.dir/rule:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/hephaestus.dir/rule
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/hephaestus.dir/rule
 .PHONY : src/CMakeFiles/hephaestus.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ hephaestus: src/CMakeFiles/hephaestus.dir/rule
 
 # fast build rule for target.
 hephaestus/fast:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/build
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/build
 .PHONY : hephaestus/fast
 
 main.o: main.cpp.o
@@ -135,7 +135,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/main.cpp.o
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -143,7 +143,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/main.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -151,7 +151,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/main.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 player_camera.o: player_camera.cpp.o
@@ -159,7 +159,7 @@ player_camera.o: player_camera.cpp.o
 
 # target to build an object file
 player_camera.cpp.o:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/player_camera.cpp.o
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/player_camera.cpp.o
 .PHONY : player_camera.cpp.o
 
 player_camera.i: player_camera.cpp.i
@@ -167,7 +167,7 @@ player_camera.i: player_camera.cpp.i
 
 # target to preprocess a source file
 player_camera.cpp.i:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/player_camera.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/player_camera.cpp.i
 .PHONY : player_camera.cpp.i
 
 player_camera.s: player_camera.cpp.s
@@ -175,15 +175,39 @@ player_camera.s: player_camera.cpp.s
 
 # target to generate assembly for a file
 player_camera.cpp.s:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/player_camera.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/player_camera.cpp.s
 .PHONY : player_camera.cpp.s
+
+vk_char_control.o: vk_char_control.cpp.o
+.PHONY : vk_char_control.o
+
+# target to build an object file
+vk_char_control.cpp.o:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o
+.PHONY : vk_char_control.cpp.o
+
+vk_char_control.i: vk_char_control.cpp.i
+.PHONY : vk_char_control.i
+
+# target to preprocess a source file
+vk_char_control.cpp.i:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.i
+.PHONY : vk_char_control.cpp.i
+
+vk_char_control.s: vk_char_control.cpp.s
+.PHONY : vk_char_control.s
+
+# target to generate assembly for a file
+vk_char_control.cpp.s:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.s
+.PHONY : vk_char_control.cpp.s
 
 vk_engine.o: vk_engine.cpp.o
 .PHONY : vk_engine.o
 
 # target to build an object file
 vk_engine.cpp.o:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o
 .PHONY : vk_engine.cpp.o
 
 vk_engine.i: vk_engine.cpp.i
@@ -191,7 +215,7 @@ vk_engine.i: vk_engine.cpp.i
 
 # target to preprocess a source file
 vk_engine.cpp.i:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_engine.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_engine.cpp.i
 .PHONY : vk_engine.cpp.i
 
 vk_engine.s: vk_engine.cpp.s
@@ -199,7 +223,7 @@ vk_engine.s: vk_engine.cpp.s
 
 # target to generate assembly for a file
 vk_engine.cpp.s:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_engine.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_engine.cpp.s
 .PHONY : vk_engine.cpp.s
 
 vk_initializers.o: vk_initializers.cpp.o
@@ -207,7 +231,7 @@ vk_initializers.o: vk_initializers.cpp.o
 
 # target to build an object file
 vk_initializers.cpp.o:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o
 .PHONY : vk_initializers.cpp.o
 
 vk_initializers.i: vk_initializers.cpp.i
@@ -215,7 +239,7 @@ vk_initializers.i: vk_initializers.cpp.i
 
 # target to preprocess a source file
 vk_initializers.cpp.i:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.i
 .PHONY : vk_initializers.cpp.i
 
 vk_initializers.s: vk_initializers.cpp.s
@@ -223,7 +247,7 @@ vk_initializers.s: vk_initializers.cpp.s
 
 # target to generate assembly for a file
 vk_initializers.cpp.s:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.s
 .PHONY : vk_initializers.cpp.s
 
 vk_mesh.o: vk_mesh.cpp.o
@@ -231,7 +255,7 @@ vk_mesh.o: vk_mesh.cpp.o
 
 # target to build an object file
 vk_mesh.cpp.o:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o
 .PHONY : vk_mesh.cpp.o
 
 vk_mesh.i: vk_mesh.cpp.i
@@ -239,7 +263,7 @@ vk_mesh.i: vk_mesh.cpp.i
 
 # target to preprocess a source file
 vk_mesh.cpp.i:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.i
 .PHONY : vk_mesh.cpp.i
 
 vk_mesh.s: vk_mesh.cpp.s
@@ -247,7 +271,7 @@ vk_mesh.s: vk_mesh.cpp.s
 
 # target to generate assembly for a file
 vk_mesh.cpp.s:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.s
 .PHONY : vk_mesh.cpp.s
 
 vk_textures.o: vk_textures.cpp.o
@@ -255,7 +279,7 @@ vk_textures.o: vk_textures.cpp.o
 
 # target to build an object file
 vk_textures.cpp.o:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o
 .PHONY : vk_textures.cpp.o
 
 vk_textures.i: vk_textures.cpp.i
@@ -263,7 +287,7 @@ vk_textures.i: vk_textures.cpp.i
 
 # target to preprocess a source file
 vk_textures.cpp.i:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_textures.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_textures.cpp.i
 .PHONY : vk_textures.cpp.i
 
 vk_textures.s: vk_textures.cpp.s
@@ -271,7 +295,7 @@ vk_textures.s: vk_textures.cpp.s
 
 # target to generate assembly for a file
 vk_textures.cpp.s:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_textures.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/vk_textures.cpp.s
 .PHONY : vk_textures.cpp.s
 
 # Help Target
@@ -289,6 +313,9 @@ help:
 	@echo "... player_camera.o"
 	@echo "... player_camera.i"
 	@echo "... player_camera.s"
+	@echo "... vk_char_control.o"
+	@echo "... vk_char_control.i"
+	@echo "... vk_char_control.s"
 	@echo "... vk_engine.o"
 	@echo "... vk_engine.i"
 	@echo "... vk_engine.s"
@@ -312,6 +339,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

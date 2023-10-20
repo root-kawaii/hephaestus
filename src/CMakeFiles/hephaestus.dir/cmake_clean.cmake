@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/hephaestus.dir/main.cpp.o.d"
   "CMakeFiles/hephaestus.dir/player_camera.cpp.o"
   "CMakeFiles/hephaestus.dir/player_camera.cpp.o.d"
+  "CMakeFiles/hephaestus.dir/vk_char_control.cpp.o"
+  "CMakeFiles/hephaestus.dir/vk_char_control.cpp.o.d"
   "CMakeFiles/hephaestus.dir/vk_engine.cpp.o"
   "CMakeFiles/hephaestus.dir/vk_engine.cpp.o.d"
   "CMakeFiles/hephaestus.dir/vk_initializers.cpp.o"

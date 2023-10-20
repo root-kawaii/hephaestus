@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # Utility rule file for Shaders.
 
@@ -76,36 +76,36 @@ CMakeFiles/Shaders: shaders/triangle.frag.spv
 CMakeFiles/Shaders: shaders/triangle.vert.spv
 
 shaders/colored_triangle.frag.spv: shaders/colored_triangle.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating shaders/colored_triangle.frag.spv"
-	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/colored_triangle.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/colored_triangle.frag.spv
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating shaders/colored_triangle.frag.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/colored_triangle.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/colored_triangle.frag.spv
 
 shaders/colored_triangle.vert.spv: shaders/colored_triangle.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating shaders/colored_triangle.vert.spv"
-	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/colored_triangle.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/colored_triangle.vert.spv
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating shaders/colored_triangle.vert.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/colored_triangle.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/colored_triangle.vert.spv
 
 shaders/default_lit.frag.spv: shaders/default_lit.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating shaders/default_lit.frag.spv"
-	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/default_lit.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/default_lit.frag.spv
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating shaders/default_lit.frag.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/default_lit.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/default_lit.frag.spv
 
 shaders/textured_lit.frag.spv: shaders/textured_lit.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating shaders/textured_lit.frag.spv"
-	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/textured_lit.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/textured_lit.frag.spv
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating shaders/textured_lit.frag.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/textured_lit.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/textured_lit.frag.spv
 
 shaders/tri_mesh.vert.spv: shaders/tri_mesh.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating shaders/tri_mesh.vert.spv"
-	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/tri_mesh.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/tri_mesh.vert.spv
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating shaders/tri_mesh.vert.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/tri_mesh.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/tri_mesh.vert.spv
 
 shaders/tri_mesh_ssbo.vert.spv: shaders/tri_mesh_ssbo.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating shaders/tri_mesh_ssbo.vert.spv"
-	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/tri_mesh_ssbo.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/tri_mesh_ssbo.vert.spv
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating shaders/tri_mesh_ssbo.vert.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/tri_mesh_ssbo.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/tri_mesh_ssbo.vert.spv
 
 shaders/triangle.frag.spv: shaders/triangle.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating shaders/triangle.frag.spv"
-	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/triangle.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/triangle.frag.spv
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating shaders/triangle.frag.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/triangle.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/triangle.frag.spv
 
 shaders/triangle.vert.spv: shaders/triangle.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating shaders/triangle.vert.spv"
-	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/triangle.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/shaders/triangle.vert.spv
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating shaders/triangle.vert.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/triangle.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/triangle.vert.spv
 
 Shaders: CMakeFiles/Shaders
 Shaders: shaders/colored_triangle.frag.spv
@@ -128,6 +128,6 @@ CMakeFiles/Shaders.dir/clean:
 .PHONY : CMakeFiles/Shaders.dir/clean
 
 CMakeFiles/Shaders.dir/depend:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles/Shaders.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles/Shaders.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Shaders.dir/depend
 

@@ -1,7 +1,7 @@
 src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o: \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_initializers.cpp \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_initializers.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/src/vk_types.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_initializers.cpp \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_initializers.h \
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_types.h \
   /usr/local/include/vulkan/vulkan.h \
   /usr/local/include/vulkan/vk_platform.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stddef.h \
@@ -42,4 +42,4 @@ src/CMakeFiles/hephaestus.dir/vk_initializers.cpp.o: \
   /usr/local/include/vk_video/vulkan_video_codec_h264std_decode.h \
   /usr/local/include/vk_video/vulkan_video_codec_h265std.h \
   /usr/local/include/vk_video/vulkan_video_codec_h265std_decode.h \
-  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/third_party/vma/vk_mem_alloc.h
+  /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/vma/vk_mem_alloc.h

@@ -102,9 +102,7 @@ void PlayerCamera::update_camera(float deltaSeconds)
 glm::mat4 PlayerCamera::get_view_matrix()
 {
     glm::vec3 camPos = position;
-
     glm::mat4 cam_rot = (get_rotation_matrix());
-
     glm::mat4 view = glm::translate(glm::mat4{1}, camPos) * cam_rot;
 
     // we need to invert the camera matrix
@@ -118,7 +116,7 @@ glm::mat4 PlayerCamera::get_projection_matrix(bool bReverse /*= true*/)
     if (bReverse)
     {
         glm::mat4 pro = glm::perspective(glm::radians(70.f), 1700.f / 900.f, 5000.0f, 0.1f);
-        pro[1][1] *= -1;
+        pro[1][1] *= 1;
         return pro;
     }
     else
@@ -128,6 +126,14 @@ glm::mat4 PlayerCamera::get_projection_matrix(bool bReverse /*= true*/)
         return pro;
     }
 }
+
+// glm::mat4 PlayerCamera::get_rotation_matrix_obj()
+// {
+//     glm::mat4 yaw_rot = glm::rotate(glm::mat4{1}, yaw, _obj.position);
+//     glm::mat4 pitch_rot = glm::rotate(glm::mat4{yaw_rot}, pitch, _obj.position);
+
+//     return pitch_rot;
+// }
 
 glm::mat4 PlayerCamera::get_rotation_matrix()
 {

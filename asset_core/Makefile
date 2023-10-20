@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_SOURCE_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point
+CMAKE_BINARY_DIR = /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/asset_core//CMakeFiles/progress.marks
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point/CMakeFiles 0
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/asset_core//CMakeFiles/progress.marks
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/clean
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/preinstall
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/preinstall
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 asset_core/CMakeFiles/asset_core.dir/rule:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/CMakeFiles/asset_core.dir/rule
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 asset_core/CMakeFiles/asset_core.dir/rule
 .PHONY : asset_core/CMakeFiles/asset_core.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ asset_core: asset_core/CMakeFiles/asset_core.dir/rule
 
 # fast build rule for target.
 asset_core/fast:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/build
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/build
 .PHONY : asset_core/fast
 
 asset_main.o: asset_main.cpp.o
@@ -135,7 +135,7 @@ asset_main.o: asset_main.cpp.o
 
 # target to build an object file
 asset_main.cpp.o:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.o
 .PHONY : asset_main.cpp.o
 
 asset_main.i: asset_main.cpp.i
@@ -143,7 +143,7 @@ asset_main.i: asset_main.cpp.i
 
 # target to preprocess a source file
 asset_main.cpp.i:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.i
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.i
 .PHONY : asset_main.cpp.i
 
 asset_main.s: asset_main.cpp.s
@@ -151,7 +151,7 @@ asset_main.s: asset_main.cpp.s
 
 # target to generate assembly for a file
 asset_main.cpp.s:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.s
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f asset_core/CMakeFiles/asset_core.dir/build.make asset_core/CMakeFiles/asset_core.dir/asset_main.cpp.s
 .PHONY : asset_main.cpp.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan-guide-starting-point && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
