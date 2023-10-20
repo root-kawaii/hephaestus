@@ -4,6 +4,15 @@ engine following vulkan-guide
 
 TODO
 
+implement rotation around object, best way is have a renderobject to which camera locks
+and write function for rotation around renderobject position
+
+8 directions movement ( ahead + side)
+
+understand forward declaration
+
+///////
+
 physics ??
 
 fix limited imgui input buffer
