@@ -21,12 +21,14 @@
 #define VMA_IMPLEMENTATION
 #include "vk_mem_alloc.h"
 
-constexpr bool bUseValidationLayers = true;
+constexpr bool bUseValidationLayers = false;
 
 // we want to immediately abort when there is an error. In normal engines this would give an error message to the user, or perform a dump of state.
 using namespace std;
+namespace fs = std::filesystem;
 
 vector<string> prev_commands;
+vector<string> files;
 bool ischanged;
 std::string path = "";
 
@@ -226,7 +228,7 @@ void VulkanEngine::run()
       ImGui_ImplSDL2_ProcessEvent(&e);
 
       // close the window when user alt-f4s or clicks the X button
-      if (!_konsole)
+      if (_mode == 1)
       {
         _camera.process_input_event(&e);
       }
@@ -239,16 +241,39 @@ void VulkanEngine::run()
 
         if (e.key.keysym.sym == SDLK_1)
         {
-          _konsole = !_konsole;
+          _mode = 0;
+        }
+        if (e.key.keysym.sym == SDLK_2)
+        {
+          _mode = 1;
+        }
+        if (e.key.keysym.sym == SDLK_3)
+        {
+          _mode = 2;
         }
         if (e.key.keysym.sym == SDLK_RETURN)
         {
           prev_commands.push_back(path);
           console_parser();
         }
-        if (!_konsole)
+        if (_mode == 2)
         {
-          // commands that work only of console
+          if (e.key.keysym.sym == SDLK_w)
+          {
+            glm::vec3 velocity = {0.01f, 0, 0};
+            _renderables[_renderables.size() - 1].position += velocity;
+            glm::mat4 translation = glm::translate(glm::mat4{1.0}, _renderables[_renderables.size() - 1].position);
+            glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(1, 1, 1));
+            _renderables[_renderables.size() - 1].transformMatrix = translation * scale;
+          }
+          if (e.key.keysym.sym == SDLK_s)
+          {
+            glm::vec3 velocity = {-0.01f, 0, 0};
+            _renderables[_renderables.size() - 1].position += velocity;
+            glm::mat4 translation = glm::translate(glm::mat4{1.0}, _renderables[_renderables.size() - 1].position);
+            glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(1, 1, 1));
+            _renderables[_renderables.size() - 1].transformMatrix = translation * scale;
+          }
         }
       }
       _camera.update_camera(elapsed_seconds.count() * 1000.f);
@@ -260,13 +285,15 @@ void VulkanEngine::run()
     ImGui::NewFrame();
 
     // imgui commands
-    if (_konsole)
+    if (_mode == 0)
     {
       ImGui::InputTextWithHint("", "", path.data(), 1024);
     }
-    ImGui::Text("Framerate: %f", 1 / frame_time.count());
-    ImGui::Text("%s", _konsole ? "true" : "false");
-    cout << _konsole;
+    for (std::string i : files)
+    {
+      ImGui::Text(i.data());
+    }
+    ImGui::Text("%f", (_mode == 1 || _mode == 2) ? 1 / frame_time.count() : 0);
     draw();
   }
 }
@@ -1092,6 +1119,7 @@ void VulkanEngine::init_scene()
       glm::mat4 translation = glm::translate(glm::mat4{1.0}, glm::vec3(x, 0, y));
       glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(0.2, 0.2, 0.2));
       tri.transformMatrix = translation * scale;
+      tri.position = {x, 0, y};
 
       _renderables.push_back(tri);
     }
@@ -1386,6 +1414,7 @@ void VulkanEngine::init_scene2()
   obj.mesh = get_mesh(path.data());
   obj.material = get_material("defaultmesh");
   obj.transformMatrix = glm::mat4{1.0f};
+  obj.position = {0, 0, 0};
 
   _renderables.push_back(obj);
 
@@ -1415,10 +1444,26 @@ void VulkanEngine::load_meshes2()
 
 void VulkanEngine::console_parser()
 {
-  if (path.rfind("assets", 0))
+  if (strncmp(path.data(), "load", 4) == 0)
   {
-    // path.erase(0, 4);
+    std::string str = path.data();
+    str.erase(0, 5);
+    std::string newone = "assets/";
+    path = newone + str;
     load_meshes2();
     init_scene2();
+  }
+  if (strncmp(path.data(), "reset", 5) == 0)
+  {
+    // path.erase(0, 4);
+    _camera.position = {0.f, 6.f, 5.f};
+  }
+  if (strncmp(path.data(), "ls", 2) == 0)
+  {
+    // path.erase(0, 4);
+    std::string str = path.data();
+    str.erase(0, 3);
+    for (const auto &entry : fs::directory_iterator(str))
+      files.push_back(entry.path());
   }
 }

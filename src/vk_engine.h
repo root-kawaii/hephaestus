@@ -82,6 +82,8 @@ struct RenderObject
     Material *material;
 
     glm::mat4 transformMatrix;
+
+    glm::vec3 position;
 };
 
 struct FrameData
@@ -132,12 +134,14 @@ constexpr unsigned int FRAME_OVERLAP = 2;
 
 class VulkanEngine
 {
+
 public:
+    int _mode{0};
     bool _isInitialized{false};
     int _frameNumber{0};
     int _selectedShader{0};
 
-    VkExtent2D _windowExtent{800, 500};
+    VkExtent2D _windowExtent{600, 400};
 
     struct SDL_Window *_window{nullptr};
 
@@ -219,8 +223,6 @@ public:
     Mesh *get_mesh(const std::string &name);
 
     VkSampler _blockySampler;
-
-    bool _konsole = false;
 
     void console_parser();
 
