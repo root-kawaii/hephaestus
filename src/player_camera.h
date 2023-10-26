@@ -5,6 +5,9 @@
 #include <vk_types.h>
 #include <SDL2/SDL_events.h>
 #include <glm/glm.hpp>
+// #include <vk_engine.h>
+
+struct RenderObject;
 
 struct PlayerCamera
 {
@@ -21,6 +24,7 @@ struct PlayerCamera
     void process_input_event(SDL_Event *ev);
     void update_camera(float deltaSeconds);
 
+    glm::mat4 get_view_matrix_obj(RenderObject *obj);
     glm::mat4 get_view_matrix();
     glm::mat4 get_projection_matrix(bool bReverse = true);
     glm::mat4 get_rotation_matrix();

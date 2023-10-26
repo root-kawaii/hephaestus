@@ -283,6 +283,7 @@ void VulkanEngine::run()
       ImGui::Text(i.data());
     }
     ImGui::Text("%f", (_mode == 1 || _mode == 2) ? 1 / frame_time.count() : 0);
+    ImGui::Text("%f,%f,%f ", _camera.position.x, _camera.position.y, _camera.position.z);
     draw();
   }
 }
@@ -985,8 +986,16 @@ void VulkanEngine::draw_objects(VkCommandBuffer cmd, RenderObject *first, int co
   // make a model view matrix for rendering the object
   // camera view
   glm::vec3 camPos = _camera.position;
+  glm::mat4 view;
+  if (_mode == 2)
+  {
+    view = _camera.get_view_matrix_obj(_mainChar);
+  }
+  else
+  {
+    view = _camera.get_view_matrix();
+  }
 
-  glm::mat4 view = _camera.get_view_matrix();
   // camera projection
   glm::mat4 projection = _camera.get_projection_matrix(false);
   // projection[1][1] *= -1;
@@ -1036,6 +1045,7 @@ void VulkanEngine::draw_objects(VkCommandBuffer cmd, RenderObject *first, int co
 
   for (int i = 0; i < count; i++)
   {
+
     RenderObject &object = first[i];
 
     // only bind the pipeline if it doesnt match with the already bound one

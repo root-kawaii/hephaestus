@@ -145,7 +145,7 @@ public:
     int _frameNumber{0};
     int _selectedShader{0};
 
-    VkExtent2D _windowExtent{600, 400};
+    VkExtent2D _windowExtent{900, 500};
 
     struct SDL_Window *_window{nullptr};
 

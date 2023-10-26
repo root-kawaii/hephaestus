@@ -2,6 +2,8 @@
 #include <SDL2/SDL.h>
 
 #include <glm/gtx/transform.hpp>
+#include <vk_engine.h>
+
 void PlayerCamera::process_input_event(SDL_Event *ev)
 {
     if (ev->type == SDL_KEYDOWN)
@@ -107,6 +109,23 @@ glm::mat4 PlayerCamera::get_view_matrix()
 
     // we need to invert the camera matrix
     view = glm::inverse(view);
+
+    return view;
+}
+
+glm::mat4 PlayerCamera::get_view_matrix_obj(RenderObject *obj)
+{
+    glm::mat4 view;
+    float radius = 6.0f;
+    float camX = sin(yaw / 1000.0f) * radius;
+    float camZ = cos(yaw / 1000.0f) * radius;
+
+    view = glm::lookAt(
+        glm::vec3(camX, 3.0f, camZ) + obj->position,
+        obj->position,
+        glm::vec3(0.0f, 1.0f, 0.0f));
+
+    position = {camX, 3.0f, camZ};
 
     return view;
 }
