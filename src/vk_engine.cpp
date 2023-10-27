@@ -8,6 +8,12 @@
 #include "imgui_impl_sdl.h"
 #include "imgui_impl_vulkan.h"
 
+#include "dia.h"
+
+#include <btBulletDynamicsCommon.h>
+
+#include "physics.h"
+
 #include "vk_engine.h"
 
 #include <SDL2/SDL.h>
@@ -31,7 +37,6 @@ namespace fs = std::filesystem;
 vector<string> prev_commands;
 vector<string> files;
 bool ischanged;
-std::string path = "";
 
 #define VK_CHECK(x)                                               \
   do                                                              \
@@ -75,21 +80,20 @@ void VulkanEngine::init()
 
   init_pipelines();
 
-  load_images();
+  // load_images();
 
-  load_meshes();
+  // load_meshes();
 
-  init_scene();
+  // init_scene();
 
   init_imgui();
 
   // everything went fine
   _isInitialized = true;
 
-  _camera = {};
-  _camera.position = {0.f, 3.f, -2.f};
-  _mainChar = &_renderables[_renderables.size() - 1];
+  Phys::physics_setup();
 }
+
 void VulkanEngine::cleanup()
 {
   if (_isInitialized)
@@ -159,7 +163,10 @@ void VulkanEngine::draw()
 
   vkCmdBeginRenderPass(cmd, &rpInfo, VK_SUBPASS_CONTENTS_INLINE);
 
-  draw_objects(cmd, _renderables.data(), _renderables.size());
+  if (_sceneLoaded)
+  {
+    draw_objects(cmd, _renderables.data(), _renderables.size());
+  }
   ImGui_ImplVulkan_RenderDrawData(ImGui::GetDrawData(), cmd);
   // finalize the render pass
   vkCmdEndRenderPass(cmd);
@@ -210,8 +217,13 @@ void VulkanEngine::run()
   SDL_Event e;
   bool bQuit = false;
 
+  ImGuiStyle &style = ImGui::GetStyle();
+  style.Colors[ImGuiCol_WindowBg] = ImVec4(0, 0, 0, 0.90);
+
   // Using time point and system_clock
-  std::chrono::time_point<std::chrono::system_clock> start, end, old;
+  std::chrono::time_point<std::chrono::system_clock>
+      start,
+      end, old;
 
   start = std::chrono::system_clock::now();
   end = std::chrono::system_clock::now();
@@ -223,22 +235,53 @@ void VulkanEngine::run()
     end = std::chrono::system_clock::now();
     std::chrono::duration<float> frame_time = end - old;
     std::chrono::duration<float> elapsed_seconds = end - start;
+
+    ImGui_ImplVulkan_NewFrame();
+    ImGui_ImplSDL2_NewFrame(_window);
+
+    ImGui::NewFrame();
+
+    if (ImGui::BeginMainMenuBar())
+    {
+      if (ImGui::BeginMenu("File"))
+      {
+        if (ImGui::MenuItem("Create"))
+        {
+          init_scene();
+        }
+        // if (ImGui::MenuItem("Open", "Ctrl+O"))
+        // {
+        // }
+        // if (ImGui::MenuItem("Save", "Ctrl+S"))
+        // {
+        // }
+        // if (ImGui::MenuItem("Save as.."))
+        // {
+        // }
+        ImGui::EndMenu();
+      }
+      ImGui::EndMainMenuBar();
+    }
     // Handle events on queue
     while (SDL_PollEvent(&e) != 0)
 
     {
       ImGui_ImplSDL2_ProcessEvent(&e);
 
+      if (!_sceneLoaded)
+      {
+      }
+
       // close the window when user alt-f4s or clicks the X button
       if (_mode == 1)
       {
-        _camera.process_input_event(&e);
+        _currentScene.world_camera.process_input_event(&e);
       }
       if (_mode == 2)
       {
-        // _camera._obj = _renderables[_renderables.size() - 1];
+        //_currentScene.world_camera._obj = _renderables[_renderables.size() - 1];
 
-        _mover.move(_mainChar, &e, &_camera);
+        // _mover.move(_mainChar, &e, &_currentScene.world_camera);
       }
       if (e.type == SDL_QUIT)
       {
@@ -261,29 +304,40 @@ void VulkanEngine::run()
         }
         if (e.key.keysym.sym == SDLK_RETURN)
         {
-          prev_commands.push_back(path);
+          prev_commands.push_back(_path);
           console_parser();
         }
       }
-      _camera.update_camera(elapsed_seconds.count() * 1000.f);
+      _currentScene.world_camera.update_camera(elapsed_seconds.count() * 1000.f);
     }
 
-    ImGui_ImplVulkan_NewFrame();
-    ImGui_ImplSDL2_NewFrame(_window);
-
-    ImGui::NewFrame();
-
-    // imgui commands
-    if (_mode == 0)
+    if (_sceneLoaded)
     {
-      ImGui::InputTextWithHint("", "", path.data(), 1024);
+      if (_mode == 0)
+      {
+        ImGui::InputTextWithHint("", "", _consoleBuffer.data(), 1024);
+      }
+      for (WorldObject i : _currentScene.obj_world)
+      {
+        std::string a = std::to_string(i.position.x);
+        std::string b = std::to_string(i.position.y);
+        std::string c = std::to_string(i.position.z);
+        a = i.objectName + " " + b + " " + c + " " + a;
+        ImGui::Text(a.data());
+      }
+      ImGui::Text("%f", (_mode == 1 || _mode == 2) ? 1 / frame_time.count() : 0);
+      ImGui::Text("%f,%f,%f ", _currentScene.world_camera.position.y, _currentScene.world_camera.position.z, _currentScene.world_camera.position.x);
+      // ImGui::Text("%f,%f,%f ", _mainChar->position.x, _mainChar->position.y, _mainChar->position.z);
+
+      if (ImGui::Button("Load"))
+      {
+
+        pathos(&_path);
+        load_meshes2();
+        update_scene();
+      }
     }
-    for (std::string i : files)
-    {
-      ImGui::Text(i.data());
-    }
-    ImGui::Text("%f", (_mode == 1 || _mode == 2) ? 1 / frame_time.count() : 0);
-    ImGui::Text("%f,%f,%f ", _camera.position.x, _camera.position.y, _camera.position.z);
+
     draw();
   }
 }
@@ -857,13 +911,18 @@ void VulkanEngine::load_meshes()
   Mesh lostEmpire{};
   lostEmpire.load_from_obj("assets/lost_empire.obj");
 
+  Mesh floor{};
+  floor.load_from_obj("assets/floor.obj");
+
   upload_mesh(triMesh);
   upload_mesh(monkeyMesh);
   upload_mesh(lostEmpire);
+  upload_mesh(floor);
 
   _meshes["monkey"] = monkeyMesh;
   _meshes["triangle"] = triMesh;
   _meshes["empire"] = lostEmpire;
+  _meshes["floor"] = floor;
 }
 
 void VulkanEngine::load_images()
@@ -985,19 +1044,19 @@ void VulkanEngine::draw_objects(VkCommandBuffer cmd, RenderObject *first, int co
 {
   // make a model view matrix for rendering the object
   // camera view
-  glm::vec3 camPos = _camera.position;
+  glm::vec3 camPos = _currentScene.world_camera.position;
   glm::mat4 view;
   if (_mode == 2)
   {
-    view = _camera.get_view_matrix_obj(_mainChar);
+    // view =_currentScene.world_camera.get_view_matrix_obj(_mainChar);
   }
   else
   {
-    view = _camera.get_view_matrix();
+    view = _currentScene.world_camera.get_view_matrix();
   }
 
   // camera projection
-  glm::mat4 projection = _camera.get_projection_matrix(false);
+  glm::mat4 projection = _currentScene.world_camera.get_projection_matrix(false);
   // projection[1][1] *= -1;
 
   GPUCameraData camData;
@@ -1093,56 +1152,50 @@ void VulkanEngine::draw_objects(VkCommandBuffer cmd, RenderObject *first, int co
 
 void VulkanEngine::init_scene()
 {
+  // _currentScene.obj_world.push_back();
+  PlayerCamera newCam;
+  newCam.inputAxis.x = 0.f;
+  newCam.inputAxis.y = 0.f;
+  newCam.inputAxis.z = 0.f;
+  newCam.position = {0.f, 5.f, -5.f};
+  _currentScene.world_camera = newCam;
 
-  // RenderObject map;
-  // map.mesh = get_mesh("empire");
-  // map.material = get_material("texturedmesh");
-  // map.transformMatrix = glm::translate(glm::vec3{5, -10, 0}); // glm::mat4{ 1.0f };
+  _sceneLoaded = true;
+  // _currentScene.player = ;
 
-  // _renderables.push_back(map);
+  // RenderObject floor;
+  // floor.mesh = get_mesh("floor");
+  // floor.material = get_material("defaultmesh");
+  // floor.transformMatrix = glm::mat4{1.0f};
+  // floor.position = {0, 0, 0};
 
-  for (int x = -20; x <= 20; x++)
-  {
-    for (int y = -20; y <= 20; y++)
-    {
+  // _renderables.push_back(floor);
 
-      RenderObject tri;
-      tri.mesh = get_mesh("triangle");
-      tri.material = get_material("defaultmesh");
-      glm::mat4 translation = glm::translate(glm::mat4{1.0}, glm::vec3(x, 0, y));
-      glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(0.2, 0.2, 0.2));
-      tri.transformMatrix = translation * scale;
-      tri.position = {x, 0, y};
+  // RenderObject monkey;
+  // monkey.mesh = get_mesh("monkey");
+  // monkey.material = get_material("defaultmesh");
+  // monkey.transformMatrix = glm::mat4{1.0f};
+  // monkey.position = {1, 0, 0};
 
-      _renderables.push_back(tri);
-    }
-  }
+  // _renderables.push_back(monkey);
 
-  RenderObject monkey;
-  monkey.mesh = get_mesh("monkey");
-  monkey.material = get_material("defaultmesh");
-  monkey.transformMatrix = glm::mat4{1.0f};
-  monkey.position = {0, 0, 0};
+  // Material *texturedMat = get_material("texturedmesh");
 
-  _renderables.push_back(monkey);
+  // VkDescriptorSetAllocateInfo allocInfo = {};
+  // allocInfo.pNext = nullptr;
+  // allocInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO;
+  // allocInfo.descriptorPool = _descriptorPool;
+  // allocInfo.descriptorSetCount = 1;
+  // allocInfo.pSetLayouts = &_singleTextureSetLayout;
 
-  Material *texturedMat = get_material("texturedmesh");
+  // vkAllocateDescriptorSets(_device, &allocInfo, &texturedMat->textureSet);
 
-  VkDescriptorSetAllocateInfo allocInfo = {};
-  allocInfo.pNext = nullptr;
-  allocInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO;
-  allocInfo.descriptorPool = _descriptorPool;
-  allocInfo.descriptorSetCount = 1;
-  allocInfo.pSetLayouts = &_singleTextureSetLayout;
+  // VkSamplerCreateInfo samplerInfo = vkinit::sampler_create_info(VK_FILTER_NEAREST);
 
-  vkAllocateDescriptorSets(_device, &allocInfo, &texturedMat->textureSet);
+  // vkCreateSampler(_device, &samplerInfo, nullptr, &_blockySampler);
 
-  VkSamplerCreateInfo samplerInfo = vkinit::sampler_create_info(VK_FILTER_NEAREST);
-
-  vkCreateSampler(_device, &samplerInfo, nullptr, &_blockySampler);
-
-  _mainDeletionQueue.push_function([=]()
-                                   { vkDestroySampler(_device, _blockySampler, nullptr); });
+  // _mainDeletionQueue.push_function([=]()
+  //                                  { vkDestroySampler(_device, _blockySampler, nullptr); });
 
   // VkDescriptorImageInfo imageBufferInfo;
   // imageBufferInfo.sampler = blockySampler;
@@ -1409,25 +1462,33 @@ void VulkanEngine::init_imgui()
 		ImGui_ImplVulkan_Shutdown(); });
 }
 
-void VulkanEngine::init_scene2()
+void VulkanEngine::update_scene()
 {
   RenderObject obj;
-  obj.mesh = get_mesh(path.data());
+  obj.mesh = get_mesh(_path.data());
   obj.material = get_material("defaultmesh");
   obj.transformMatrix = glm::mat4{1.0f};
   obj.position = {0, 0, 0};
 
   _renderables.push_back(obj);
 
-  Material *texturedMat = get_material("texturedmesh");
+  WorldObject newOne;
+  newOne.material = get_material("defaultmesh");
+  newOne.mesh = get_mesh(_path.data());
+  newOne.position = {0, 0, 0};
+  newOne.objectName = _path.erase(0, 7).erase(_path.length() - 4, 4).data();
 
-  VkDescriptorImageInfo imageBufferInfo;
-  imageBufferInfo.sampler = _blockySampler;
-  imageBufferInfo.imageView = _loadedTextures["empire_diffuse"].imageView;
-  imageBufferInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+  _currentScene.obj_world.push_back(newOne);
 
-  VkWriteDescriptorSet texture1 = vkinit::write_descriptor_image(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, texturedMat->textureSet, &imageBufferInfo, 0);
-  vkUpdateDescriptorSets(_device, 1, &texture1, 0, nullptr);
+  // Material *texturedMat = get_material("texturedmesh");
+
+  // VkDescriptorImageInfo imageBufferInfo;
+  // imageBufferInfo.sampler = _blockySampler;
+  // imageBufferInfo.imageView = _loadedTextures["empire_diffuse"].imageView;
+  // imageBufferInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+
+  // VkWriteDescriptorSet texture1 = vkinit::write_descriptor_image(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, texturedMat->textureSet, &imageBufferInfo, 0);
+  // vkUpdateDescriptorSets(_device, 1, &texture1, 0, nullptr);
 }
 
 void VulkanEngine::load_meshes2()
@@ -1435,34 +1496,34 @@ void VulkanEngine::load_meshes2()
 
   // load the monkey
   Mesh pathMesh{};
-  pathMesh.load_from_obj(path.data());
+  pathMesh.load_from_obj(_path.data());
   // monkeyMesh._vertices[0].position *= _selectedShader;
 
   upload_mesh(pathMesh);
 
-  _meshes[path.data()] = pathMesh;
+  _meshes[_path.data()] = pathMesh;
 }
 
 void VulkanEngine::console_parser()
 {
-  if (strncmp(path.data(), "load", 4) == 0)
+  if (strncmp(_consoleBuffer.data(), "load", 4) == 0)
   {
-    std::string str = path.data();
+    std::string str = _consoleBuffer.data();
     str.erase(0, 5);
     std::string newone = "assets/";
-    path = newone + str;
+    _path = newone + str;
     load_meshes2();
-    init_scene2();
+    update_scene();
   }
-  if (strncmp(path.data(), "reset", 5) == 0)
+  if (strncmp(_consoleBuffer.data(), "reset", 5) == 0)
   {
-    // path.erase(0, 4);
-    _camera.position = {0.f, 6.f, 5.f};
+    // _path.erase(0, 4);
+    _currentScene.world_camera.position = {0.f, 6.f, 5.f};
   }
-  if (strncmp(path.data(), "ls", 2) == 0)
+  if (strncmp(_consoleBuffer.data(), "ls", 2) == 0)
   {
-    // path.erase(0, 4);
-    std::string str = path.data();
+    // _path.erase(0, 4);
+    std::string str = _consoleBuffer.data();
     str.erase(0, 3);
     for (const auto &entry : fs::directory_iterator(str))
       files.push_back(entry.path());

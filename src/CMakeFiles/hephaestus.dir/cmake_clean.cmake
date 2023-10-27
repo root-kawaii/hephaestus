@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "../bin/hephaestus"
   "../bin/hephaestus.pdb"
+  "CMakeFiles/hephaestus.dir/dia.mm.o"
+  "CMakeFiles/hephaestus.dir/dia.mm.o.d"
   "CMakeFiles/hephaestus.dir/main.cpp.o"
   "CMakeFiles/hephaestus.dir/main.cpp.o.d"
+  "CMakeFiles/hephaestus.dir/physics.cpp.o"
+  "CMakeFiles/hephaestus.dir/physics.cpp.o.d"
   "CMakeFiles/hephaestus.dir/player_camera.cpp.o"
   "CMakeFiles/hephaestus.dir/player_camera.cpp.o.d"
   "CMakeFiles/hephaestus.dir/vk_char_control.cpp.o"

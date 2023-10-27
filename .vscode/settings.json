@@ -88,7 +88,10 @@
     "unordered_set": "cpp",
     "forward_list": "cpp",
     "regex": "cpp",
-    "valarray": "cpp"
+    "valarray": "cpp",
+    "urdfstringsplit.h": "c",
+    "codecvt": "cpp",
+    "fstream": "cpp"
   },
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

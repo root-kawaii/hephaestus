@@ -167,6 +167,34 @@ src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/vk_char_control.cpp.s"
 	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.cpp -o CMakeFiles/hephaestus.dir/vk_char_control.cpp.s
 
+src/CMakeFiles/hephaestus.dir/physics.cpp.o: src/CMakeFiles/hephaestus.dir/flags.make
+src/CMakeFiles/hephaestus.dir/physics.cpp.o: src/physics.cpp
+src/CMakeFiles/hephaestus.dir/physics.cpp.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/hephaestus.dir/physics.cpp.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/physics.cpp.o -MF CMakeFiles/hephaestus.dir/physics.cpp.o.d -o CMakeFiles/hephaestus.dir/physics.cpp.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/physics.cpp
+
+src/CMakeFiles/hephaestus.dir/physics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/physics.cpp.i"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/physics.cpp > CMakeFiles/hephaestus.dir/physics.cpp.i
+
+src/CMakeFiles/hephaestus.dir/physics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/physics.cpp.s"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/physics.cpp -o CMakeFiles/hephaestus.dir/physics.cpp.s
+
+src/CMakeFiles/hephaestus.dir/dia.mm.o: src/CMakeFiles/hephaestus.dir/flags.make
+src/CMakeFiles/hephaestus.dir/dia.mm.o: src/dia.mm
+src/CMakeFiles/hephaestus.dir/dia.mm.o: src/CMakeFiles/hephaestus.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/hephaestus.dir/dia.mm.o"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/hephaestus.dir/dia.mm.o -MF CMakeFiles/hephaestus.dir/dia.mm.o.d -o CMakeFiles/hephaestus.dir/dia.mm.o -c /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/dia.mm
+
+src/CMakeFiles/hephaestus.dir/dia.mm.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hephaestus.dir/dia.mm.i"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/dia.mm > CMakeFiles/hephaestus.dir/dia.mm.i
+
+src/CMakeFiles/hephaestus.dir/dia.mm.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hephaestus.dir/dia.mm.s"
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/dia.mm -o CMakeFiles/hephaestus.dir/dia.mm.s
+
 # Object files for target hephaestus
 hephaestus_OBJECTS = \
 "CMakeFiles/hephaestus.dir/main.cpp.o" \
@@ -175,7 +203,9 @@ hephaestus_OBJECTS = \
 "CMakeFiles/hephaestus.dir/vk_mesh.cpp.o" \
 "CMakeFiles/hephaestus.dir/vk_textures.cpp.o" \
 "CMakeFiles/hephaestus.dir/player_camera.cpp.o" \
-"CMakeFiles/hephaestus.dir/vk_char_control.cpp.o"
+"CMakeFiles/hephaestus.dir/vk_char_control.cpp.o" \
+"CMakeFiles/hephaestus.dir/physics.cpp.o" \
+"CMakeFiles/hephaestus.dir/dia.mm.o"
 
 # External object files for target hephaestus
 hephaestus_EXTERNAL_OBJECTS =
@@ -187,13 +217,15 @@ bin/hephaestus: src/CMakeFiles/hephaestus.dir/vk_mesh.cpp.o
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/vk_textures.cpp.o
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/player_camera.cpp.o
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o
+bin/hephaestus: src/CMakeFiles/hephaestus.dir/physics.cpp.o
+bin/hephaestus: src/CMakeFiles/hephaestus.dir/dia.mm.o
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/build.make
 bin/hephaestus: third_party/libvkbootstrap.a
 bin/hephaestus: third_party/libtinyobjloader.a
 bin/hephaestus: third_party/libimgui.a
 bin/hephaestus: /usr/local/lib/libvulkan.dylib
 bin/hephaestus: src/CMakeFiles/hephaestus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../bin/hephaestus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../bin/hephaestus"
 	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hephaestus.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

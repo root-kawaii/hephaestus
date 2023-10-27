@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/dia.mm" "src/CMakeFiles/hephaestus.dir/dia.mm.o" "gcc" "src/CMakeFiles/hephaestus.dir/dia.mm.o.d"
   "/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/main.cpp" "src/CMakeFiles/hephaestus.dir/main.cpp.o" "gcc" "src/CMakeFiles/hephaestus.dir/main.cpp.o.d"
+  "/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/physics.cpp" "src/CMakeFiles/hephaestus.dir/physics.cpp.o" "gcc" "src/CMakeFiles/hephaestus.dir/physics.cpp.o.d"
   "/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/player_camera.cpp" "src/CMakeFiles/hephaestus.dir/player_camera.cpp.o" "gcc" "src/CMakeFiles/hephaestus.dir/player_camera.cpp.o.d"
   "/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_char_control.cpp" "src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o" "gcc" "src/CMakeFiles/hephaestus.dir/vk_char_control.cpp.o.d"
   "/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src/vk_engine.cpp" "src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o" "gcc" "src/CMakeFiles/hephaestus.dir/vk_engine.cpp.o.d"

@@ -15,14 +15,23 @@ add_executable(hephaestus
     player_camera.cpp
     vk_char_control.cpp
     vk_char_control.h
+    physics.cpp
+    dia.h
+    dia.mm
     )
 
 
 set_property(TARGET hephaestus PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "$<TARGET_FILE_DIR:hephaestus>")
 
 target_include_directories(hephaestus PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
-target_link_libraries(hephaestus vkbootstrap vma glm tinyobjloader imgui stb_image)
+target_link_libraries(hephaestus vkbootstrap vma glm tinyobjloader imgui stb_image bullet3 )
+
+find_library(APPKIT_LIB AppKit)
+target_link_libraries(hephaestus ${APPKIT_LIB})
 
 target_link_libraries(hephaestus Vulkan::Vulkan sdl2)
 
 add_dependencies(hephaestus Shaders)
+
+
+

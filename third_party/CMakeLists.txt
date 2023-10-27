@@ -6,6 +6,8 @@ add_library(vma INTERFACE)
 
 add_library(stb_image INTERFACE)
 
+add_library(bullet3 INTERFACE)
+
 add_library(tinyobjloader STATIC)
 
 target_sources(vkbootstrap PRIVATE 
@@ -57,6 +59,31 @@ target_sources(imgui PRIVATE
     imgui/imgui_impl_sdl.cpp
     )
 
+
+
+# target_sources(bullet3 INTERFACE 
+# bullet3/lib/libBullet3Common.a
+# bullet3/lib/libBulletCollision.a
+# bullet3/lib/libBulletDynamics.a
+# bullet3/lib/libBulletSoftBody.a
+# bullet3/lib/libLinearMath.a
+# bullet3/lib/libBulletInverseDynamics.a
+# )
+
+target_link_libraries(bullet3 INTERFACE BulletSoftBody BulletDynamics BulletCollision Bullet3Common LinearMath)
+
+# target_sources(bullet3 PRIVATE 
+#     bullet3/include/bullet/btBulletDynamicsCommon.h
+
+#     )
+
+target_link_directories(bullet3 INTERFACE bullet3/lib)
+
+target_include_directories(bullet3 INTERFACE bullet3/include/bullet)
+target_include_directories(bullet3 INTERFACE bullet3/include/bullet/*)
+
 target_link_libraries(imgui PUBLIC Vulkan::Vulkan sdl2)
 
 target_include_directories(stb_image INTERFACE stb_image)
+
+

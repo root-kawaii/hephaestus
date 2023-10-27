@@ -130,6 +130,30 @@ hephaestus/fast:
 	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/build
 .PHONY : hephaestus/fast
 
+dia.o: dia.mm.o
+.PHONY : dia.o
+
+# target to build an object file
+dia.mm.o:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/dia.mm.o
+.PHONY : dia.mm.o
+
+dia.i: dia.mm.i
+.PHONY : dia.i
+
+# target to preprocess a source file
+dia.mm.i:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/dia.mm.i
+.PHONY : dia.mm.i
+
+dia.s: dia.mm.s
+.PHONY : dia.s
+
+# target to generate assembly for a file
+dia.mm.s:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/dia.mm.s
+.PHONY : dia.mm.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +177,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+physics.o: physics.cpp.o
+.PHONY : physics.o
+
+# target to build an object file
+physics.cpp.o:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/physics.cpp.o
+.PHONY : physics.cpp.o
+
+physics.i: physics.cpp.i
+.PHONY : physics.i
+
+# target to preprocess a source file
+physics.cpp.i:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/physics.cpp.i
+.PHONY : physics.cpp.i
+
+physics.s: physics.cpp.s
+.PHONY : physics.s
+
+# target to generate assembly for a file
+physics.cpp.s:
+	cd /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hephaestus.dir/build.make src/CMakeFiles/hephaestus.dir/physics.cpp.s
+.PHONY : physics.cpp.s
 
 player_camera.o: player_camera.cpp.o
 .PHONY : player_camera.o
@@ -307,9 +355,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hephaestus"
+	@echo "... dia.o"
+	@echo "... dia.i"
+	@echo "... dia.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... physics.o"
+	@echo "... physics.i"
+	@echo "... physics.s"
 	@echo "... player_camera.o"
 	@echo "... player_camera.i"
 	@echo "... player_camera.s"

@@ -4,6 +4,22 @@ engine following vulkan-guide
 
 TODO
 
+//////////
+
+need to be able to move objects that i put into the world
+so i need to update logic position and render position
+maybe do it with a nice interface
+
+then keep overall fixing the code with the scene structure and the state
+
+STILL dunno why camera as object works and not as pointer to object
+
+///////
+///////
+
+//////
+///////
+
 implement rotation around object, best way is have a renderobject to which camera locks
 and write function for rotation around renderobject position
 

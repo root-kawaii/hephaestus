@@ -135,21 +135,55 @@ struct GPUObjectData
 
 constexpr unsigned int FRAME_OVERLAP = 2;
 
+struct WorldObject
+{
+    Mesh *mesh;
+
+    Material *material;
+
+    glm::vec3 position;
+
+    std::string objectName;
+
+    // rotation
+};
+
+struct Scene
+{
+    std::vector<WorldObject> obj_world;
+    PlayerCamera world_camera;
+    WorldObject player;
+};
+
+class State
+{
+public:
+    float time;
+    Scene *scene;
+
+private:
+    float id;
+};
+
 class VulkanEngine
 {
 
 public:
     RenderObject *_mainChar;
+    bool _sceneLoaded{false};
+    std::string _path{""};
+    std::string _consoleBuffer{""};
     int _mode{0}; // 0 is conole, 1 is freecam, 2 is playmode
     bool _isInitialized{false};
     int _frameNumber{0};
     int _selectedShader{0};
+    Scene _currentScene;
 
     VkExtent2D _windowExtent{900, 500};
 
     struct SDL_Window *_window{nullptr};
 
-    PlayerCamera _camera;
+    // PlayerCamera _camera;
     Movement _mover;
 
     VkInstance _instance;
@@ -194,6 +228,8 @@ public:
     GPUSceneData _sceneParameters;
     AllocatedBuffer _sceneParameterBuffer;
 
+    bool _checko{false};
+
     UploadContext _uploadContext;
     // initializes everything in the engine
     void init();
@@ -233,7 +269,7 @@ public:
 
     void init_imgui();
 
-    void init_scene2();
+    void update_scene();
 
     void load_meshes2();
 
