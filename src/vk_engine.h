@@ -135,8 +135,9 @@ struct GPUObjectData
 
 constexpr unsigned int FRAME_OVERLAP = 2;
 
-struct WorldObject
+class WorldObject
 {
+public:
     Mesh *mesh;
 
     Material *material;
@@ -144,6 +145,12 @@ struct WorldObject
     glm::vec3 position;
 
     std::string objectName;
+
+    RenderObject *reference;
+
+    void setPosition(glm::vec3 newpos);
+
+    int ID;
 
     // rotation
 };

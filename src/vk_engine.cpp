@@ -37,6 +37,7 @@ namespace fs = std::filesystem;
 vector<string> prev_commands;
 vector<string> files;
 bool ischanged;
+int ID = 0;
 
 #define VK_CHECK(x)                                               \
   do                                                              \
@@ -315,15 +316,34 @@ void VulkanEngine::run()
     {
       if (_mode == 0)
       {
-        ImGui::InputTextWithHint("", "", _consoleBuffer.data(), 1024);
+        // ImGui::InputTextWithHint("", "", _consoleBuffer.data(), 1024);
       }
-      for (WorldObject i : _currentScene.obj_world)
+      for (auto it = std::begin(_currentScene.obj_world); it != std::end(_currentScene.obj_world); ++it)
       {
-        std::string a = std::to_string(i.position.x);
-        std::string b = std::to_string(i.position.y);
-        std::string c = std::to_string(i.position.z);
-        a = i.objectName + " " + b + " " + c + " " + a;
+        std::string a = std::to_string(it->position.x);
+        std::string b = std::to_string(it->position.y);
+        std::string c = std::to_string(it->position.z);
+        a = it->objectName + " " + a + " " + b + " " + c;
         ImGui::Text(a.data());
+        // ImGui::Text(std::to_string(_currentScene.obj_world.size()).data());
+
+        std::string newx = std::string("x ") + it->objectName;
+        if (ImGui::Button(newx.data()))
+        {
+          it->setPosition(it->position + glm::vec3(1, 0, 0));
+        }
+        ImGui::SameLine();
+        std::string newy = std::string("y ") + it->objectName;
+        if (ImGui::Button(newy.data()))
+        {
+          it->setPosition(it->position + glm::vec3(0, 1, 0));
+        }
+        ImGui::SameLine();
+        std::string newz = std::string("z ") + it->objectName;
+        if (ImGui::Button(newz.data()))
+        {
+          it->setPosition(it->position + glm::vec3(0, 0, 1));
+        }
       }
       ImGui::Text("%f", (_mode == 1 || _mode == 2) ? 1 / frame_time.count() : 0);
       ImGui::Text("%f,%f,%f ", _currentScene.world_camera.position.y, _currentScene.world_camera.position.z, _currentScene.world_camera.position.x);
@@ -1477,6 +1497,9 @@ void VulkanEngine::update_scene()
   newOne.mesh = get_mesh(_path.data());
   newOne.position = {0, 0, 0};
   newOne.objectName = _path.erase(0, 7).erase(_path.length() - 4, 4).data();
+  newOne.ID = ID;
+  ID += 1;
+  newOne.reference = &_renderables[0]; // maybe reference directly object ??
 
   _currentScene.obj_world.push_back(newOne);
 
@@ -1528,4 +1551,13 @@ void VulkanEngine::console_parser()
     for (const auto &entry : fs::directory_iterator(str))
       files.push_back(entry.path());
   }
+}
+
+void WorldObject::setPosition(glm::vec3 newpos)
+{
+  this->position = newpos;
+  this->reference[this->ID].position = newpos;
+  glm::mat4 translation = glm::translate(glm::mat4{1.0}, newpos);
+  glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(1, 1, 1));
+  this->reference[this->ID].transformMatrix = translation * scale;
 }

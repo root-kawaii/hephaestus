@@ -12,6 +12,8 @@ maybe do it with a nice interface
 
 then keep overall fixing the code with the scene structure and the state
 
+THEN SERIALIZATION and save scene and state
+
 STILL dunno why camera as object works and not as pointer to object
 
 ///////
