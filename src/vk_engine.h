@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include <vk_char_control.h>
+#include "vk_char_control.h"
 #include <vk_types.h>
 #include <vector>
 #include <functional>

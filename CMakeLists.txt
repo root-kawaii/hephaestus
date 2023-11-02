@@ -6,6 +6,9 @@ cmake_minimum_required (VERSION 3.8)
 project ("hephaestus")
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS_DEBUG "-g -DDEBUG")
+
+
 
 find_package(Vulkan REQUIRED)
 

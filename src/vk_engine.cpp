@@ -28,7 +28,7 @@
 #define VMA_IMPLEMENTATION
 #include "vk_mem_alloc.h"
 
-constexpr bool bUseValidationLayers = false;
+constexpr bool bUseValidationLayers = true;
 
 // we want to immediately abort when there is an error. In normal engines this would give an error message to the user, or perform a dump of state.
 using namespace std;
@@ -790,17 +790,16 @@ void VulkanEngine::init_pipelines()
   VkPipeline texPipeline = pipelineBuilder.build_pipeline(_device, _renderPass);
   create_material(texPipeline, texturedPipeLayout, "texturedmesh");
 
-  vkDestroyShaderModule(_device, meshVertShader, nullptr);
-  vkDestroyShaderModule(_device, colorMeshShader, nullptr);
-  vkDestroyShaderModule(_device, texturedMeshShader, nullptr);
-
   _mainDeletionQueue.push_function([=]()
                                    {
-		vkDestroyPipeline(_device, meshPipeline, nullptr);
-		vkDestroyPipeline(_device, texPipeline, nullptr);
+      vkDestroyShaderModule(_device, meshVertShader, nullptr);
+      vkDestroyShaderModule(_device, colorMeshShader, nullptr);
+      vkDestroyShaderModule(_device, texturedMeshShader, nullptr);
+  		vkDestroyPipeline(_device, meshPipeline, nullptr);
+  		vkDestroyPipeline(_device, texPipeline, nullptr);
 
-		vkDestroyPipelineLayout(_device, meshPipLayout, nullptr);
-		vkDestroyPipelineLayout(_device, texturedPipeLayout, nullptr); });
+  		vkDestroyPipelineLayout(_device, meshPipLayout, nullptr);
+  		vkDestroyPipelineLayout(_device, texturedPipeLayout, nullptr); });
 }
 
 bool VulkanEngine::load_shader_module(const char *filePath, VkShaderModule *outShaderModule)
@@ -1506,6 +1505,7 @@ void VulkanEngine::update_scene()
   // Material *texturedMat = get_material("texturedmesh");
 
   // VkDescriptorImageInfo imageBufferInfo;
+
   // imageBufferInfo.sampler = _blockySampler;
   // imageBufferInfo.imageView = _loadedTextures["empire_diffuse"].imageView;
   // imageBufferInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
@@ -1559,5 +1559,6 @@ void WorldObject::setPosition(glm::vec3 newpos)
   this->reference[this->ID].position = newpos;
   glm::mat4 translation = glm::translate(glm::mat4{1.0}, newpos);
   glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(1, 1, 1));
+
   this->reference[this->ID].transformMatrix = translation * scale;
 }

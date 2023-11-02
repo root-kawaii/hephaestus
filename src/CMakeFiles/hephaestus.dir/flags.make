@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/src -I/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/vkbootstrap -I/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/vma -I/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/glm -I/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/tinyobjloader -I/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/imgui -I/Library/Frameworks/include/SDL2 -I/include/SDL2 -I/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/stb_image -I/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/bullet3/include/bullet -I"/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/third_party/bullet3/include/bullet/*" -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks -isystem /usr/local/include
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
+CXX_FLAGSarm64 = -g -DDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
 
-CXX_FLAGS = -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
+CXX_FLAGS = -g -DDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
 

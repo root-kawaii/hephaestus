@@ -25,7 +25,7 @@ CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDef
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -216,9 +216,6 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Path to a library.
-COCOA_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Cocoa.framework
-
 //Path to a program.
 GLSL_VALIDATOR:FILEPATH=/usr/local/bin/glslangValidator
 
@@ -237,9 +234,6 @@ Vulkan_LIBRARY:FILEPATH=/usr/local/lib/libvulkan.dylib
 //Dependencies for the target
 asset_core_LIB_DEPENDS:STATIC=general;json;general;lz4;
 
-//The directory containing a CMake configuration file for bullet3.
-bullet3_DIR:PATH=bullet3_DIR-NOTFOUND
-
 //Value Computed by CMake
 hephaestus_BINARY_DIR:STATIC=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan
 
@@ -251,9 +245,6 @@ hephaestus_SOURCE_DIR:STATIC=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaest
 
 //Dependencies for the target
 imgui_LIB_DEPENDS:STATIC=general;Vulkan::Vulkan;
-
-//Path to a library.
-nfd:FILEPATH=nfd-NOTFOUND
 
 ///Library/Frameworks/SDL2.framework/Versions/A/
 sdl2_DIR:PATH=/Library/Frameworks
