@@ -53,6 +53,7 @@ int ID = 0;
 void VulkanEngine::init()
 {
   // We initialize SDL and create a window with it.
+  _renderables.reserve(100); // needs to be fixed
   SDL_Init(SDL_INIT_VIDEO);
 
   SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_VULKAN);
@@ -1492,13 +1493,14 @@ void VulkanEngine::update_scene()
   _renderables.push_back(obj);
 
   WorldObject newOne;
-  newOne.material = get_material("defaultmesh");
-  newOne.mesh = get_mesh(_path.data());
+
   newOne.position = {0, 0, 0};
   newOne.objectName = _path.erase(0, 7).erase(_path.length() - 4, 4).data();
   newOne.ID = ID;
   ID += 1;
-  newOne.reference = &_renderables[0]; // maybe reference directly object ??
+  newOne.reference = &_renderables.back();
+
+  // maybe reference directly object ??
 
   _currentScene.obj_world.push_back(newOne);
 
@@ -1555,10 +1557,11 @@ void VulkanEngine::console_parser()
 
 void WorldObject::setPosition(glm::vec3 newpos)
 {
+
   this->position = newpos;
-  this->reference[this->ID].position = newpos;
+  this->reference->position = newpos;
   glm::mat4 translation = glm::translate(glm::mat4{1.0}, newpos);
   glm::mat4 scale = glm::scale(glm::mat4{1.0}, glm::vec3(1, 1, 1));
 
-  this->reference[this->ID].transformMatrix = translation * scale;
+  this->reference->transformMatrix = translation * scale;
 }

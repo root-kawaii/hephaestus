@@ -138,17 +138,13 @@ constexpr unsigned int FRAME_OVERLAP = 2;
 class WorldObject
 {
 public:
-    Mesh *mesh;
-
-    Material *material;
-
     glm::vec3 position;
 
     std::string objectName;
 
     RenderObject *reference;
 
-    void setPosition(glm::vec3 newpos);
+    void setPosition(glm::vec3 newpos); // index the right object using ID, basically get the render object I added as ID-th
 
     int ID;
 
@@ -186,7 +182,7 @@ public:
     int _selectedShader{0};
     Scene _currentScene;
 
-    VkExtent2D _windowExtent{900, 500};
+    VkExtent2D _windowExtent{1280, 720};
 
     struct SDL_Window *_window{nullptr};
 
