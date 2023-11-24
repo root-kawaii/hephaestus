@@ -182,7 +182,11 @@ public:
     int _selectedShader{0};
     Scene _currentScene;
 
-    VkExtent2D _windowExtent{1280, 720};
+    VkExtent2D _windowExtent{1500, 750};
+
+    std::vector<VkFence> inFlightFences;
+
+    bool framebufferResized = false;
 
     struct SDL_Window *_window{nullptr};
 
@@ -212,6 +216,7 @@ public:
     std::vector<VkImageView> _swapchainImageViews;
 
     DeletionQueue _mainDeletionQueue;
+    DeletionQueue _swapChainDeletionQueue;
 
     VmaAllocator _allocator; // vma lib allocator
 
@@ -275,6 +280,10 @@ public:
     void update_scene();
 
     void load_meshes2();
+
+    void recreateSwapChain();
+
+    void cleanupSwapChain();
 
     // our draw function
     void draw_objects(VkCommandBuffer cmd, RenderObject *first, int count);

@@ -64,7 +64,7 @@ void VulkanEngine::init()
       SDL_WINDOWPOS_UNDEFINED,
       _windowExtent.width,
       _windowExtent.height,
-      window_flags);
+      window_flags | SDL_WINDOW_RESIZABLE);
 
   init_vulkan();
 
@@ -104,6 +104,8 @@ void VulkanEngine::cleanup()
     // make sure the gpu has stopped doing its things
     vkDeviceWaitIdle(_device);
 
+    cleanupSwapChain();
+
     _mainDeletionQueue.flush();
 
     vkDestroySurfaceKHR(_instance, _surface, nullptr);
@@ -114,6 +116,29 @@ void VulkanEngine::cleanup()
 
     SDL_DestroyWindow(_window);
   }
+}
+
+void VulkanEngine::cleanupSwapChain()
+{
+  _swapChainDeletionQueue.flush();
+}
+// might not work since we cleanup already
+
+void VulkanEngine::recreateSwapChain()
+{
+  vkDeviceWaitIdle(_device);
+
+  cleanupSwapChain();
+
+  init_swapchain();
+
+  init_default_renderpass();
+  // // createImageViews();
+  init_framebuffers();
+
+  // init_descriptors();
+
+  init_pipelines();
 }
 
 void VulkanEngine::draw()
@@ -133,7 +158,17 @@ void VulkanEngine::draw()
 
   // request image from the swapchain
   uint32_t swapchainImageIndex;
-  VK_CHECK(vkAcquireNextImageKHR(_device, _swapchain, 1000000000, get_current_frame()._presentSemaphore, nullptr, &swapchainImageIndex));
+  VkResult result = vkAcquireNextImageKHR(_device, _swapchain, 1000000000, get_current_frame()._presentSemaphore, nullptr, &swapchainImageIndex);
+
+  if (result == VK_ERROR_OUT_OF_DATE_KHR)
+  {
+    // recreateSwapChain();
+    return;
+  }
+  else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
+  {
+    throw std::runtime_error("failed to acquire swap chain image!");
+  }
 
   // naming it cmd for shorter writing
   VkCommandBuffer cmd = get_current_frame()._mainCommandBuffer;
@@ -208,7 +243,16 @@ void VulkanEngine::draw()
 
   presentInfo.pImageIndices = &swapchainImageIndex;
 
-  VK_CHECK(vkQueuePresentKHR(_graphicsQueue, &presentInfo));
+  result = vkQueuePresentKHR(_graphicsQueue, &presentInfo);
+
+  if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR)
+  {
+    // recreateSwapChain();
+  }
+  else if (result != VK_SUCCESS)
+  {
+    throw std::runtime_error("failed to present swap chain image!");
+  }
 
   // increase the number of frames drawn
   _frameNumber++;
@@ -288,6 +332,21 @@ void VulkanEngine::run()
       if (e.type == SDL_QUIT)
       {
         bQuit = true;
+      }
+
+      else if (e.type == SDL_WINDOWEVENT)
+      {
+        if (e.window.event == SDL_WINDOWEVENT_EXPOSED)
+        {
+          SDL_GetWindowSize(_window, (int *)&_windowExtent.width, (int *)&_windowExtent.height);
+          printf("Resizing window to: %d x %d\n", (int *)&_windowExtent.width, (int *)&_windowExtent.height);
+          SDL_SetWindowSize(_window, (int)_windowExtent.width, (int)_windowExtent.height);
+          SDL_Surface *_surface = SDL_GetWindowSurface(_window);
+          SDL_BlitSurface(_surface, NULL, _surface, NULL);
+          SDL_UpdateWindowSurface(_window);
+          recreateSwapChain();
+        }
+        break;
       }
       else if (e.type == SDL_KEYDOWN)
       {
@@ -450,8 +509,8 @@ void VulkanEngine::init_swapchain()
 
   _swachainImageFormat = vkbSwapchain.image_format;
 
-  _mainDeletionQueue.push_function([=]()
-                                   { vkDestroySwapchainKHR(_device, _swapchain, nullptr); });
+  _swapChainDeletionQueue.push_function([=]()
+                                        { vkDestroySwapchainKHR(_device, _swapchain, nullptr); });
 
   // depth image size will match the window
   VkExtent3D depthImageExtent = {
@@ -480,8 +539,8 @@ void VulkanEngine::init_swapchain()
   VK_CHECK(vkCreateImageView(_device, &dview_info, nullptr, &_depthImageView));
 
   // add to deletion queues
-  _mainDeletionQueue.push_function([=]()
-                                   {
+  _swapChainDeletionQueue.push_function([=]()
+                                        {
 		vkDestroyImageView(_device, _depthImageView, nullptr);
 		vmaDestroyImage(_allocator, _depthImage._image, _depthImage._allocation); });
 }
@@ -569,8 +628,8 @@ void VulkanEngine::init_default_renderpass()
 
   VK_CHECK(vkCreateRenderPass(_device, &render_pass_info, nullptr, &_renderPass));
 
-  _mainDeletionQueue.push_function([=]()
-                                   { vkDestroyRenderPass(_device, _renderPass, nullptr); });
+  _swapChainDeletionQueue.push_function([=]()
+                                        { vkDestroyRenderPass(_device, _renderPass, nullptr); });
 }
 
 void VulkanEngine::init_framebuffers()
@@ -592,10 +651,10 @@ void VulkanEngine::init_framebuffers()
     fb_info.attachmentCount = 2;
     VK_CHECK(vkCreateFramebuffer(_device, &fb_info, nullptr, &_framebuffers[i]));
 
-    _mainDeletionQueue.push_function([=]()
-                                     {
-			vkDestroyFramebuffer(_device, _framebuffers[i], nullptr);
-			vkDestroyImageView(_device, _swapchainImageViews[i], nullptr); });
+    _swapChainDeletionQueue.push_function([=]()
+                                          {
+                                       vkDestroyFramebuffer(_device, _framebuffers[i], nullptr);
+                                       vkDestroyImageView(_device, _swapchainImageViews[i], nullptr); });
   }
 }
 
@@ -791,16 +850,16 @@ void VulkanEngine::init_pipelines()
   VkPipeline texPipeline = pipelineBuilder.build_pipeline(_device, _renderPass);
   create_material(texPipeline, texturedPipeLayout, "texturedmesh");
 
-  _mainDeletionQueue.push_function([=]()
-                                   {
-      vkDestroyShaderModule(_device, meshVertShader, nullptr);
-      vkDestroyShaderModule(_device, colorMeshShader, nullptr);
-      vkDestroyShaderModule(_device, texturedMeshShader, nullptr);
-  		vkDestroyPipeline(_device, meshPipeline, nullptr);
-  		vkDestroyPipeline(_device, texPipeline, nullptr);
+  _swapChainDeletionQueue.push_function([=]()
+                                        {
+                                      vkDestroyShaderModule(_device, meshVertShader, nullptr);
+                                      vkDestroyShaderModule(_device, colorMeshShader, nullptr);
+                                      vkDestroyShaderModule(_device, texturedMeshShader, nullptr);
+                                      vkDestroyPipeline(_device, meshPipeline, nullptr);
+                                      vkDestroyPipeline(_device, texPipeline, nullptr);
 
-  		vkDestroyPipelineLayout(_device, meshPipLayout, nullptr);
-  		vkDestroyPipelineLayout(_device, texturedPipeLayout, nullptr); });
+                                      vkDestroyPipelineLayout(_device, meshPipLayout, nullptr);
+                                      vkDestroyPipelineLayout(_device, texturedPipeLayout, nullptr); });
 }
 
 bool VulkanEngine::load_shader_module(const char *filePath, VkShaderModule *outShaderModule)
