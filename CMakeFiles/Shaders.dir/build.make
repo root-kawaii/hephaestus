@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -69,6 +69,8 @@ include CMakeFiles/Shaders.dir/progress.make
 CMakeFiles/Shaders: shaders/colored_triangle.frag.spv
 CMakeFiles/Shaders: shaders/colored_triangle.vert.spv
 CMakeFiles/Shaders: shaders/default_lit.frag.spv
+CMakeFiles/Shaders: shaders/grid.frag.spv
+CMakeFiles/Shaders: shaders/grid.vert.spv
 CMakeFiles/Shaders: shaders/textured_lit.frag.spv
 CMakeFiles/Shaders: shaders/tri_mesh.vert.spv
 CMakeFiles/Shaders: shaders/tri_mesh_ssbo.vert.spv
@@ -87,30 +89,40 @@ shaders/default_lit.frag.spv: shaders/default_lit.frag
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating shaders/default_lit.frag.spv"
 	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/default_lit.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/default_lit.frag.spv
 
+shaders/grid.frag.spv: shaders/grid.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating shaders/grid.frag.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/grid.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/grid.frag.spv
+
+shaders/grid.vert.spv: shaders/grid.vert
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating shaders/grid.vert.spv"
+	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/grid.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/grid.vert.spv
+
 shaders/textured_lit.frag.spv: shaders/textured_lit.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating shaders/textured_lit.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating shaders/textured_lit.frag.spv"
 	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/textured_lit.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/textured_lit.frag.spv
 
 shaders/tri_mesh.vert.spv: shaders/tri_mesh.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating shaders/tri_mesh.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating shaders/tri_mesh.vert.spv"
 	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/tri_mesh.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/tri_mesh.vert.spv
 
 shaders/tri_mesh_ssbo.vert.spv: shaders/tri_mesh_ssbo.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating shaders/tri_mesh_ssbo.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating shaders/tri_mesh_ssbo.vert.spv"
 	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/tri_mesh_ssbo.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/tri_mesh_ssbo.vert.spv
 
 shaders/triangle.frag.spv: shaders/triangle.frag
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating shaders/triangle.frag.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating shaders/triangle.frag.spv"
 	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/triangle.frag -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/triangle.frag.spv
 
 shaders/triangle.vert.spv: shaders/triangle.vert
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating shaders/triangle.vert.spv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating shaders/triangle.vert.spv"
 	/usr/local/bin/glslangValidator -V /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/triangle.vert -o /Users/root-kawaii/ComputerGraphics/Vulkan/hephaestus/vulkan/shaders/triangle.vert.spv
 
 Shaders: CMakeFiles/Shaders
 Shaders: shaders/colored_triangle.frag.spv
 Shaders: shaders/colored_triangle.vert.spv
 Shaders: shaders/default_lit.frag.spv
+Shaders: shaders/grid.frag.spv
+Shaders: shaders/grid.vert.spv
 Shaders: shaders/textured_lit.frag.spv
 Shaders: shaders/tri_mesh.vert.spv
 Shaders: shaders/tri_mesh_ssbo.vert.spv

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "shaders/colored_triangle.frag.spv"
   "shaders/colored_triangle.vert.spv"
   "shaders/default_lit.frag.spv"
+  "shaders/grid.frag.spv"
+  "shaders/grid.vert.spv"
   "shaders/textured_lit.frag.spv"
   "shaders/tri_mesh.vert.spv"
   "shaders/tri_mesh_ssbo.vert.spv"

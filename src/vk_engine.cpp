@@ -747,14 +747,33 @@ void VulkanEngine::init_pipelines()
     std::cout << "Error when building the mesh vertex shader module" << std::endl;
   }
 
+  VkShaderModule gridMeshShader;
+  if (!load_shader_module("shaders/grid.frag.spv", &gridMeshShader))
+  {
+    std::cout << "Error when building the mesh vertex shader module" << std::endl;
+  }
+
+  VkShaderModule gridVertShader;
+  if (!load_shader_module("shaders/grid.vert.spv", &gridVertShader))
+  {
+    std::cout << "Error when building the mesh vertex shader module" << std::endl;
+  }
+
   // build the stage-create-info for both vertex and fragment stages. This lets the pipeline know the shader modules per stage
   PipelineBuilder pipelineBuilder;
+  PipelineBuilder gridPipelineBuilder;
 
   pipelineBuilder._shaderStages.push_back(
       vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_VERTEX_BIT, meshVertShader));
 
+  gridPipelineBuilder._shaderStages.push_back(
+      vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_VERTEX_BIT, gridVertShader));
+
   pipelineBuilder._shaderStages.push_back(
       vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_FRAGMENT_BIT, colorMeshShader));
+
+  gridPipelineBuilder._shaderStages.push_back(
+      vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_FRAGMENT_BIT, gridMeshShader));
 
   // we start from just the default empty pipeline layout info
   VkPipelineLayoutCreateInfo mesh_pipeline_layout_info = vkinit::pipeline_layout_create_info();
@@ -779,6 +798,11 @@ void VulkanEngine::init_pipelines()
   VkPipelineLayout meshPipLayout;
   VK_CHECK(vkCreatePipelineLayout(_device, &mesh_pipeline_layout_info, nullptr, &meshPipLayout));
 
+  VkPipelineLayoutCreateInfo grid_mesh_pipeline_layout_info = mesh_pipeline_layout_info;
+
+  VkPipelineLayout gridMeshPipLayout;
+  VK_CHECK(vkCreatePipelineLayout(_device, &grid_mesh_pipeline_layout_info, nullptr, &gridMeshPipLayout));
+
   // we start from  the normal mesh layout
   VkPipelineLayoutCreateInfo textured_pipeline_layout_info = mesh_pipeline_layout_info;
 
@@ -793,12 +817,16 @@ void VulkanEngine::init_pipelines()
   // hook the push constants layout
   pipelineBuilder._pipelineLayout = meshPipLayout;
 
+  gridPipelineBuilder._pipelineLayout = gridMeshPipLayout;
+
   // vertex input controls how to read vertices from vertex buffers. We arent using it yet
   pipelineBuilder._vertexInputInfo = vkinit::vertex_input_state_create_info();
+  gridPipelineBuilder._vertexInputInfo = vkinit::vertex_input_state_create_info();
 
   // input assembly is the configuration for drawing triangle lists, strips, or individual points.
   // we are just going to draw triangle list
   pipelineBuilder._inputAssembly = vkinit::input_assembly_create_info(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST);
+  gridPipelineBuilder._inputAssembly = vkinit::input_assembly_create_info(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST);
 
   // build viewport and scissor from the swapchain extents
   pipelineBuilder._viewport.x = 0.0f;
@@ -808,20 +836,38 @@ void VulkanEngine::init_pipelines()
   pipelineBuilder._viewport.minDepth = 0.0f;
   pipelineBuilder._viewport.maxDepth = 1.0f;
 
+  gridPipelineBuilder._viewport.x = 0.0f;
+  gridPipelineBuilder._viewport.y = 0.0f;
+  gridPipelineBuilder._viewport.width = (float)_windowExtent.width;
+  gridPipelineBuilder._viewport.height = (float)_windowExtent.height;
+  gridPipelineBuilder._viewport.minDepth = 0.0f;
+  gridPipelineBuilder._viewport.maxDepth = 1.0f;
+
   pipelineBuilder._scissor.offset = {0, 0};
   pipelineBuilder._scissor.extent = _windowExtent;
+
+  gridPipelineBuilder._scissor.offset = {0, 0};
+  gridPipelineBuilder._scissor.extent = _windowExtent;
 
   // configure the rasterizer to draw filled triangles
   pipelineBuilder._rasterizer = vkinit::rasterization_state_create_info(VK_POLYGON_MODE_FILL);
 
+  gridPipelineBuilder._rasterizer = vkinit::rasterization_state_create_info(VK_POLYGON_MODE_FILL);
+
   // we dont use multisampling, so just run the default one
   pipelineBuilder._multisampling = vkinit::multisampling_state_create_info();
+
+  gridPipelineBuilder._multisampling = vkinit::multisampling_state_create_info();
 
   // a single blend attachment with no blending and writing to RGBA
   pipelineBuilder._colorBlendAttachment = vkinit::color_blend_attachment_state();
 
+  gridPipelineBuilder._colorBlendAttachment = vkinit::color_blend_attachment_state();
+
   // default depthtesting
   pipelineBuilder._depthStencil = vkinit::depth_stencil_create_info(true, true, VK_COMPARE_OP_LESS_OR_EQUAL);
+
+  gridPipelineBuilder._depthStencil = vkinit::depth_stencil_create_info(true, true, VK_COMPARE_OP_LESS_OR_EQUAL);
 
   // build the mesh pipeline
 
@@ -834,14 +880,29 @@ void VulkanEngine::init_pipelines()
   pipelineBuilder._vertexInputInfo.pVertexBindingDescriptions = vertexDescription.bindings.data();
   pipelineBuilder._vertexInputInfo.vertexBindingDescriptionCount = vertexDescription.bindings.size();
 
+  gridPipelineBuilder._vertexInputInfo.pVertexAttributeDescriptions = vertexDescription.attributes.data();
+  gridPipelineBuilder._vertexInputInfo.vertexAttributeDescriptionCount = vertexDescription.attributes.size();
+
+  gridPipelineBuilder._vertexInputInfo.pVertexBindingDescriptions = vertexDescription.bindings.data();
+  gridPipelineBuilder._vertexInputInfo.vertexBindingDescriptionCount = vertexDescription.bindings.size();
+
   // build the mesh triangle pipeline
   VkPipeline meshPipeline = pipelineBuilder.build_pipeline(_device, _renderPass);
 
+  VkPipeline gridMeshPipeline = gridPipelineBuilder.build_pipeline(_device, _renderPass);
+
   create_material(meshPipeline, meshPipLayout, "defaultmesh");
 
+  create_material(gridMeshPipeline, gridMeshPipLayout, "gridmesh");
+
   pipelineBuilder._shaderStages.clear();
+  gridPipelineBuilder._shaderStages.clear();
+
   pipelineBuilder._shaderStages.push_back(
       vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_VERTEX_BIT, meshVertShader));
+
+  gridPipelineBuilder._shaderStages.push_back(
+      vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_VERTEX_BIT, gridVertShader));
 
   pipelineBuilder._shaderStages.push_back(
       vkinit::pipeline_shader_stage_create_info(VK_SHADER_STAGE_FRAGMENT_BIT, texturedMeshShader));
@@ -854,6 +915,7 @@ void VulkanEngine::init_pipelines()
                                         {
                                       vkDestroyShaderModule(_device, meshVertShader, nullptr);
                                       vkDestroyShaderModule(_device, colorMeshShader, nullptr);
+                                      vkDestroyShaderModule(_device, gridMeshShader, nullptr);
                                       vkDestroyShaderModule(_device, texturedMeshShader, nullptr);
                                       vkDestroyPipeline(_device, meshPipeline, nullptr);
                                       vkDestroyPipeline(_device, texPipeline, nullptr);
@@ -1545,7 +1607,7 @@ void VulkanEngine::update_scene()
 {
   RenderObject obj;
   obj.mesh = get_mesh(_path.data());
-  obj.material = get_material("defaultmesh");
+  obj.material = get_material("gridmesh");
   obj.transformMatrix = glm::mat4{1.0f};
   obj.position = {0, 0, 0};
 
