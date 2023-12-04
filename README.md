@@ -45,3 +45,27 @@ improve parsing probably
 autocompletion of engine konsole
 new commands ?
 understand shaders
+
+# TODO
+
+vec3 rayCast(double xpos, double ypos, mat4 projection, mat4 view) {
+// converts a position from the 2d xpos, ypos to a normalized 3d direction
+float x = (2.0f _ xpos) / WIDTH - 1.0f;
+float y = 1.0f - (2.0f _ ypos) / HEIGHT;
+float z = 1.0f;
+vec3 ray*nds = vec3(x, y, z);
+vec4 ray_clip = vec4(ray_nds.x, ray_nds.y, -1.0f, 1.0f);
+// eye space to clip we would multiply by projection so
+// clip space to eye space is the inverse projection
+vec4 ray_eye = inverse(projection) * ray*clip;
+// convert point to forwards
+ray_eye = vec4(ray_eye.x, ray_eye.y, -1.0f, 0.0f);
+// world space to eye space is usually multiply by view so
+// eye space to world space is inverse view
+vec4 inv_ray_wor = (inverse(view) * ray_eye);
+vec3 ray_wor = vec3(inv_ray_wor.x, inv_ray_wor.y, inv_ray_wor.z);
+ray_wor = normalize(ray_wor);
+return ray_wor;
+}
+
+https://stackoverflow.com/questions/70239556/for-mouse-click-ray-casting-a-line-why-arent-my-starting-rays-updating-to-my-c

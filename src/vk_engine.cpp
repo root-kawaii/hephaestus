@@ -363,6 +363,23 @@ void VulkanEngine::run()
         {
           _mode = 2; // playmode
         }
+        if (e.key.keysym.sym == SDLK_4)
+        {
+          _renderables[0].material = get_material("defaultmesh");
+        }
+        if (e.key.keysym.sym == SDLK_5)
+        {
+          _renderables[0].material = get_material("gridmesh");
+        }
+        if (e.key.keysym.sym == SDLK_6)
+        {
+          SDL_GetMouseState(&x_mouse, &y_mouse);
+          line_startPoint = _currentScene.world_camera.position;
+          line_endPoint = rayCast((double)x_mouse, (double)y_mouse, _currentScene.world_camera.get_projection_matrix(), _currentScene.world_camera.get_view_matrix());
+          // lineMesh._vertices[0].position = line_startPoint;
+          // lineMesh._vertices[1].position = line_endPoint;
+          glm::vec3 intersectLine = line_endPoint - line_startPoint;
+        }
         if (e.key.keysym.sym == SDLK_RETURN)
         {
           prev_commands.push_back(_path);
@@ -405,6 +422,7 @@ void VulkanEngine::run()
           it->setPosition(it->position + glm::vec3(0, 0, 1));
         }
       }
+      // ImGui::Text("%f,%f", line_endPoint, line_startPoint);
       ImGui::Text("%f", (_mode == 1 || _mode == 2) ? 1 / frame_time.count() : 0);
       ImGui::Text("%f,%f,%f ", _currentScene.world_camera.position.y, _currentScene.world_camera.position.z, _currentScene.world_camera.position.x);
       // ImGui::Text("%f,%f,%f ", _mainChar->position.x, _mainChar->position.y, _mainChar->position.z);
@@ -1605,9 +1623,47 @@ void VulkanEngine::init_imgui()
 
 void VulkanEngine::update_scene()
 {
+
+  // make the array 3 vertices long
+  lineMesh._vertices.resize(3);
+
+  // vertex positions
+  lineMesh._vertices[0].position = {1.f, 1.f, 0.0f};
+  lineMesh._vertices[1].position = {-1.f, 1.f, 0.0f};
+  lineMesh._vertices[2].position = {0.f, -1.f, 0.0f};
+
+  // vertex colors, all green
+  lineMesh._vertices[0].color = {0.f, 1.f, 0.0f}; // pure green
+  lineMesh._vertices[1].color = {0.f, 1.f, 0.0f}; // pure green
+  lineMesh._vertices[2].color = {0.f, 1.f, 0.0f}; // pure green
+
+  // we don't care about the vertex normals
+
+  upload_mesh(lineMesh);
+
+  RenderObject line;
+  line.mesh = &lineMesh;
+  line.material = get_material("defaultmesh");
+  line.transformMatrix = glm::mat4{1.0f};
+  line.position = {0, 0, 0};
+
+  _renderables.push_back(line);
+
+  WorldObject newOne0;
+
+  newOne0.position = {0, 0, 0};
+  newOne0.objectName = "ciao";
+  newOne0.ID = ID;
+  ID += 1;
+  newOne0.reference = &_renderables.back();
+
+  // maybe reference directly object ??
+
+  _currentScene.obj_world.push_back(newOne0);
+
   RenderObject obj;
   obj.mesh = get_mesh(_path.data());
-  obj.material = get_material("gridmesh");
+  obj.material = get_material("defaultmesh");
   obj.transformMatrix = glm::mat4{1.0f};
   obj.position = {0, 0, 0};
 
@@ -1674,6 +1730,27 @@ void VulkanEngine::console_parser()
     for (const auto &entry : fs::directory_iterator(str))
       files.push_back(entry.path());
   }
+}
+
+glm::vec3 VulkanEngine::rayCast(double xpos, double ypos, glm::mat4 projection, glm::mat4 view)
+{
+  // converts a position from the 2d xpos, ypos to a normalized 3d direction
+  float x = (2.0f * xpos) / _windowExtent.width - 1.0f;
+  float y = 1.0f - (2.0f * ypos) / _windowExtent.height;
+  float z = 1.0f;
+  glm::vec3 ray_nds = glm::vec3(x, y, z);
+  glm::vec4 ray_clip = glm::vec4(ray_nds.x, ray_nds.y, -1.0f, 1.0f);
+  // eye space to clip we would multiply by projection so
+  // clip space to eye space is the inverse projection
+  glm::vec4 ray_eye = inverse(projection) * ray_clip;
+  // convert point to forwards
+  ray_eye = glm::vec4(ray_eye.x, ray_eye.y, -1.0f, 0.0f);
+  // world space to eye space is usually multiply by view so
+  // eye space to world space is inverse view
+  glm::vec4 inv_ray_wor = (inverse(view) * ray_eye);
+  glm::vec3 ray_wor = glm::vec3(inv_ray_wor.x, inv_ray_wor.y, inv_ray_wor.z);
+  ray_wor = normalize(ray_wor);
+  return ray_wor;
 }
 
 void WorldObject::setPosition(glm::vec3 newpos)

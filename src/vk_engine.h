@@ -181,6 +181,11 @@ public:
     int _frameNumber{0};
     int _selectedShader{0};
     Scene _currentScene;
+    int x_mouse;
+    int y_mouse;
+    Mesh lineMesh;
+    glm::vec3 line_startPoint;
+    glm::vec3 line_endPoint;
 
     VkExtent2D _windowExtent{1500, 750};
 
@@ -321,4 +326,6 @@ private:
     void load_images();
 
     void upload_mesh(Mesh &mesh);
+
+    glm::vec3 rayCast(double xpos, double ypos, glm::mat4 projection, glm::mat4 view);
 };
