@@ -187,7 +187,7 @@ public:
     glm::vec3 line_startPoint;
     glm::vec3 line_endPoint;
 
-    VkExtent2D _windowExtent{1500, 750};
+    VkExtent2D _windowExtent{1000, 400};
 
     std::vector<VkFence> inFlightFences;
 

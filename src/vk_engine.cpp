@@ -180,8 +180,8 @@ void VulkanEngine::draw()
 
   // make a clear-color from frame number. This will flash with a 120 frame period.
   VkClearValue clearValue;
-  float flash = abs(sin(_frameNumber / 120.f));
-  clearValue.color = {{0.0f, 0.0f, flash, 1.0f}};
+  float flash = abs(sin(_frameNumber / 100000.f));
+  clearValue.color = {{0.2f, 0.2f, 0.2f, 1.0f}};
 
   // clear depth at 1
   VkClearValue depthClear;
@@ -376,8 +376,10 @@ void VulkanEngine::run()
           SDL_GetMouseState(&x_mouse, &y_mouse);
           line_startPoint = _currentScene.world_camera.position;
           line_endPoint = rayCast((double)x_mouse, (double)y_mouse, _currentScene.world_camera.get_projection_matrix(), _currentScene.world_camera.get_view_matrix());
-          // lineMesh._vertices[0].position = line_startPoint;
-          // lineMesh._vertices[1].position = line_endPoint;
+          lineMesh._vertices[0].position = line_startPoint;
+          lineMesh._vertices[1].position = line_endPoint;
+          lineMesh._vertices[2].position = line_endPoint + glm::vec3(1, 1, 1);
+          upload_mesh(lineMesh);
           glm::vec3 intersectLine = line_endPoint - line_startPoint;
         }
         if (e.key.keysym.sym == SDLK_RETURN)
@@ -404,22 +406,40 @@ void VulkanEngine::run()
         ImGui::Text(a.data());
         // ImGui::Text(std::to_string(_currentScene.obj_world.size()).data());
 
-        std::string newx = std::string("x ") + it->objectName;
-        if (ImGui::Button(newx.data()))
+        std::string newPlusX = std::string("+x");
+        if (ImGui::Button(newPlusX.data()))
         {
           it->setPosition(it->position + glm::vec3(1, 0, 0));
         }
         ImGui::SameLine();
-        std::string newy = std::string("y ") + it->objectName;
-        if (ImGui::Button(newy.data()))
+        std::string newMinusX = std::string("-x");
+        if (ImGui::Button(newMinusX.data()))
+        {
+          it->setPosition(it->position - glm::vec3(1, 0, 0));
+        }
+        ImGui::SameLine();
+        std::string newPlusY = std::string("+y");
+        if (ImGui::Button(newPlusY.data()))
         {
           it->setPosition(it->position + glm::vec3(0, 1, 0));
         }
         ImGui::SameLine();
-        std::string newz = std::string("z ") + it->objectName;
-        if (ImGui::Button(newz.data()))
+        std::string newMinusY = std::string("-y");
+        if (ImGui::Button(newMinusY.data()))
+        {
+          it->setPosition(it->position - glm::vec3(0, 1, 0));
+        }
+        ImGui::SameLine();
+        std::string newPlusZ = std::string("+z");
+        if (ImGui::Button(newPlusZ.data()))
         {
           it->setPosition(it->position + glm::vec3(0, 0, 1));
+        }
+        ImGui::SameLine();
+        std::string newMinusZ = std::string("-z");
+        if (ImGui::Button(newMinusZ.data()))
+        {
+          it->setPosition(it->position - glm::vec3(0, 0, 1));
         }
       }
       // ImGui::Text("%f,%f", line_endPoint, line_startPoint);
@@ -1617,49 +1637,49 @@ void VulkanEngine::init_imgui()
   _mainDeletionQueue.push_function([=]()
                                    {
 
-		vkDestroyDescriptorPool(_device, imguiPool, nullptr);
+    vkDestroyDescriptorPool(_device, imguiPool, nullptr);
 		ImGui_ImplVulkan_Shutdown(); });
 }
 
 void VulkanEngine::update_scene()
 {
 
-  // make the array 3 vertices long
-  lineMesh._vertices.resize(3);
+  // // make the array 3 vertices long
+  // lineMesh._vertices.resize(3);
 
-  // vertex positions
-  lineMesh._vertices[0].position = {1.f, 1.f, 0.0f};
-  lineMesh._vertices[1].position = {-1.f, 1.f, 0.0f};
-  lineMesh._vertices[2].position = {0.f, -1.f, 0.0f};
+  // // vertex positions
+  // lineMesh._vertices[0].position = {1.f, 1.f, 0.0f};
+  // lineMesh._vertices[1].position = {-1.f, 1.f, 0.0f};
+  // lineMesh._vertices[2].position = {0.f, -1.f, 0.0f};
 
-  // vertex colors, all green
-  lineMesh._vertices[0].color = {0.f, 1.f, 0.0f}; // pure green
-  lineMesh._vertices[1].color = {0.f, 1.f, 0.0f}; // pure green
-  lineMesh._vertices[2].color = {0.f, 1.f, 0.0f}; // pure green
+  // // vertex colors, all green
+  // lineMesh._vertices[0].color = {1.f, 1.f, 0.0f}; // pure green
+  // lineMesh._vertices[1].color = {1.f, 1.f, 0.0f}; // pure green
+  // lineMesh._vertices[2].color = {1.f, 1.f, 0.0f}; // pure green
 
-  // we don't care about the vertex normals
+  // // we don't care about the vertex normals
 
-  upload_mesh(lineMesh);
+  // upload_mesh(lineMesh);
 
-  RenderObject line;
-  line.mesh = &lineMesh;
-  line.material = get_material("defaultmesh");
-  line.transformMatrix = glm::mat4{1.0f};
-  line.position = {0, 0, 0};
+  // RenderObject line;
+  // line.mesh = &lineMesh;
+  // line.material = get_material("defaultmesh");
+  // line.transformMatrix = glm::mat4{1.0f};
+  // line.position = {0, 0, 0};
 
-  _renderables.push_back(line);
+  // _renderables.push_back(line);
 
-  WorldObject newOne0;
+  // WorldObject newOne0;
 
-  newOne0.position = {0, 0, 0};
-  newOne0.objectName = "ciao";
-  newOne0.ID = ID;
-  ID += 1;
-  newOne0.reference = &_renderables.back();
+  // newOne0.position = {0, 0, 0};
+  // newOne0.objectName = "ciao";
+  // newOne0.ID = ID;
+  // ID += 1;
+  // newOne0.reference = &_renderables.back();
 
-  // maybe reference directly object ??
+  // // maybe reference directly object ??
 
-  _currentScene.obj_world.push_back(newOne0);
+  // _currentScene.obj_world.push_back(newOne0);
 
   RenderObject obj;
   obj.mesh = get_mesh(_path.data());
