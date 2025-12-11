@@ -4,7 +4,7 @@ A custom 3D rendering engine built from scratch using Vulkan API, following the 
 
 ## Project Overview
 
-Hephaestus is a real-time 3D rendering engine that showcases modern graphics programming concepts including GPU-accelerated rendering, physics simulation, and interactive camera controls. Built with C++ and Vulkan, this project emphasizes performance-oriented architecture and memory management.
+This is a real-time 3D rendering engine that showcases modern graphics programming concepts including GPU-accelerated rendering, physics simulation, and interactive camera controls. Built with C++ and Vulkan, this project emphasizes performance-oriented architecture and memory management.
 
 ## Technical Skills Demonstrated
 
@@ -145,15 +145,22 @@ Through building this engine, I gained expertise in:
 
 ### Building
 ```bash
+# Create a separate build directory (keeps source clean)
 mkdir build && cd build
 cmake ..
 make
+
+# Or use CMake's build command
+cmake -S . -B build
+cmake --build build
 ```
 
 ### Running
 ```bash
 ./bin/hephaestus
 ```
+
+**Note**: Always build in a separate `build/` directory to keep your source tree clean from generated files.
 
 ## Controls
 - **WASD**: Camera movement
